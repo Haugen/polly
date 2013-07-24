@@ -1,0 +1,11 @@
+name = Konzilo kickstart
+description = Kickstart profile for the Konzilo project
+core = 7.x
+
+; Core
+dependencies[] = menu
+dependencies[] = dblog
+dependencies[] = help
+dependencies[] = menu
+dependencies[] = taxonomy
+dependencies[] = toolbar

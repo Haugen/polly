@@ -9,3 +9,7 @@ dependencies[] = help
 dependencies[] = menu
 dependencies[] = taxonomy
 dependencies[] = toolbar
+dependencies[] = oauth_common
+dependencies[] = oauth_common_providerui
+dependencies[] = panels
+dependencies[] = ctools

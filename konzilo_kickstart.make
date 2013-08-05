@@ -80,13 +80,15 @@ projects[xmlsitemap][subdir] = contrib
 projects[metatag][version] = 1.0-beta7
 projects[metatag][subdir] = contrib
 
-projects[oauth][version] = 3.1
-projects[oauth][subdir] = contrib
+projects[oauth2_server][type] = module
+projects[oauth2_server][download][type] = git
+projects[oauth2_server][download][revision] = 879a63a
+projects[oauth2_server][subdir] = contrib
 
 projects[konzilo][type] = module
 projects[konzilo][download][type] = git
 projects[konzilo][download][url] = git@github.com:konzilo/drupal-konzilo.git
-projects[konzilo][destination] = contrib
+projects[konzilo][subdir] = contrib
 
 ; Libraries
 libraries[flexslider][download][type] = git

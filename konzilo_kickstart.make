@@ -83,6 +83,11 @@ projects[metatag][subdir] = contrib
 projects[oauth][version] = 3.1
 projects[oauth][subdir] = contrib
 
+projects[konzilo][type] = module
+projects[konzilo][download][type] = git
+projects[konzilo][download][url] = git@github.com:konzilo/drupal-konzilo.git
+projects[konzilo][destination] = contrib
+
 ; Libraries
 libraries[flexslider][download][type] = git
 libraries[flexslider][download][url] = https://github.com/m2bdev/FlexSlider.git

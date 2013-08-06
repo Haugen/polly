@@ -5,3 +5,18 @@
  */
 
 include_once 'konzilo_article.features.inc';
+
+function konzilo_article_entity_mapper() {
+  $fix_date = function ($value) {
+    return strtotime($value);
+  };
+  $mapper = new EntityMapper();
+
+  $titleMapper = new PropertyMapper('title', 'title');
+  $createdMapper = new PropertyMapper("publishdate", "created");
+  $createdMapper->addFormatter($fix_date);
+  $mapper->addMapping($createdMapper);
+  $mapper->addMapping($titleMapper);
+
+  $partMapper = new EntityMapper();
+}

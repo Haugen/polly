@@ -80,10 +80,23 @@ projects[xmlsitemap][subdir] = contrib
 projects[metatag][version] = 1.0-beta7
 projects[metatag][subdir] = contrib
 
+; Use latest version for bug fixes.
 projects[oauth2_server][type] = module
 projects[oauth2_server][download][type] = git
 projects[oauth2_server][download][revision] = 879a63a
 projects[oauth2_server][subdir] = contrib
+
+; We need to patch services for oauth2_server to work.
+projects[services][type] = module
+projects[services][version] = 7.x-3.x
+projects[services][download][type] = git
+projects[services][download][revision] = 492920e
+projects[services][subdir] = contrib
+projects[services][patch][1154420] = https://drupal.org/files/fix_controller_settings-1154420-51.patch
+
+libraries[oauth2-server-php][download][type] = get
+libraries[oauth2-server-php][download][url] = https://github.com/bshaffer/oauth2-server-php/archive/v0.8.tar.gz
+libraries[oauth2-server-php][destination] = libraries
 
 projects[konzilo][type] = module
 projects[konzilo][download][type] = git

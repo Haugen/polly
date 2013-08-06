@@ -13,3 +13,4 @@ dependencies[] = oauth2_server
 dependencies[] = konzilo
 dependencies[] = panels
 dependencies[] = ctools
+dependencies[] = konzilo_endpoint

@@ -105,7 +105,7 @@ projects[konzilo][subdir] = contrib
 
 projects[entity_mapper][type] = module
 projects[entity_mapper][download][type] = git
-projects[entity_mapper][download][url] = git@github.com:entity_mapper/drupal-entity_mapper.git
+projects[entity_mapper][download][url] = git@github.com:konzilo/drupal-entity_mapper.git
 projects[entity_mapper][subdir] = contrib
 
 libraries[ckeditor][download][type] = get

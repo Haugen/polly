@@ -90,6 +90,11 @@ projects[konzilo][download][type] = git
 projects[konzilo][download][url] = git@github.com:konzilo/drupal-konzilo.git
 projects[konzilo][subdir] = contrib
 
+projects[entity_mapper][type] = module
+projects[entity_mapper][download][type] = git
+projects[entity_mapper][download][url] = git@github.com:entity_mapper/drupal-entity_mapper.git
+projects[entity_mapper][subdir] = contrib
+
 libraries[ckeditor][download][type] = get
 libraries[ckeditor][download][url] = http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.1.3/ckeditor_4.1.3_standard.zip
 libraries[ckeditor][destination] = libraries

@@ -90,11 +90,6 @@ projects[konzilo][download][type] = git
 projects[konzilo][download][url] = git@github.com:konzilo/drupal-konzilo.git
 projects[konzilo][subdir] = contrib
 
-; Libraries
-libraries[flexslider][download][type] = git
-libraries[flexslider][download][url] = https://github.com/m2bdev/FlexSlider.git
-libraries[flexslider][destination] = libraries
-
 libraries[ckeditor][download][type] = get
 libraries[ckeditor][download][url] = http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.1.3/ckeditor_4.1.3_standard.zip
 libraries[ckeditor][destination] = libraries

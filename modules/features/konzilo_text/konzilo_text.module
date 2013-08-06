@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Konzilo Text feature.
+ */
+
+include_once 'konzilo_text.features.inc';

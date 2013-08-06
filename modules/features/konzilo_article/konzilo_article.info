@@ -1,0 +1,7 @@
+name = Konzilo Article
+core = 7.x
+package = Features
+dependencies[] = features
+features[features_api][] = api:2
+features[node][] = konzilo_article
+project path = profiles/konzilo_kickstart/modules/features

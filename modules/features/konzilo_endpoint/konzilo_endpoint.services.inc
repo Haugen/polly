@@ -21,7 +21,23 @@ function konzilo_endpoint_default_services_endpoint() {
       'server' => 'konzilo',
     ),
   );
-  $endpoint->server_settings = array();
+  $endpoint->server_settings = array(
+    'formatters' => array(
+      'bencode' => TRUE,
+      'json' => TRUE,
+      'php' => TRUE,
+      'xml' => TRUE,
+      'jsonp' => FALSE,
+    ),
+    'parsers' => array(
+      'application/json' => TRUE,
+      'application/vnd.php.serialized' => TRUE,
+      'application/xml' => TRUE,
+      'multipart/form-data' => TRUE,
+      'text/xml' => TRUE,
+      'application/x-www-form-urlencoded' => FALSE,
+    ),
+  );
   $endpoint->resources = array(
     'job' => array(
       'operations' => array(
@@ -38,8 +54,8 @@ function konzilo_endpoint_default_services_endpoint() {
           'enabled' => '1',
           'settings' => array(
             'oauth2_server' => array(
+              'require_authentication' => '1',
               'scope' => '',
-              'require_authentication' => NULL,
             ),
           ),
         ),
@@ -47,46 +63,11 @@ function konzilo_endpoint_default_services_endpoint() {
           'enabled' => '1',
           'settings' => array(
             'oauth2_server' => array(
-              'scope' => '',
-              'require_authentication' => NULL,
-            ),
-          ),
-        ),
-        'index' => array(
-          'enabled' => '1',
-          'settings' => array(
-            'oauth2_server' => array(
-              'scope' => '',
-              'require_authentication' => NULL,
-            ),
-          ),
-        ),
-      ),
-    ),
-    'node' => array(
-      'operations' => array(
-        'retrieve' => array(
-          'enabled' => '1',
-          'settings' => array(
-            'oauth2_server' => array(
-              'require_authentication' => '1',
-              'scope' => 'TEST',
-            ),
-          ),
-        ),
-        'index' => array(
-          'enabled' => '1',
-          'settings' => array(
-            'oauth2_server' => array(
               'require_authentication' => '1',
               'scope' => '',
             ),
           ),
         ),
-      ),
-    ),
-    'user' => array(
-      'operations' => array(
         'index' => array(
           'enabled' => '1',
           'settings' => array(

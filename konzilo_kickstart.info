@@ -14,3 +14,4 @@ dependencies[] = konzilo
 dependencies[] = panels
 dependencies[] = ctools
 dependencies[] = konzilo_endpoint
+dependencies[] = libraries

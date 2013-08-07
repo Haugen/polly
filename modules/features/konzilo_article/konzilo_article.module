@@ -6,17 +6,41 @@
 
 include_once 'konzilo_article.features.inc';
 
-function konzilo_article_entity_mapper() {
-  $fix_date = function ($value) {
-    return strtotime($value);
-  };
-  $mapper = new EntityMapper();
+function konzilo_article_entity_mappers() {
+  $mapper = entity_mapper('konzilo_article', 'node')
+    ->setDefaults(array('type' => 'konzilo_article'))
+    ->addMapping(new PropertyMapper('title', 'title'));
+  $part_mappers = array();
+  $part_mappers['text'] = entity_mapper('konzilo_articlepart', 'node')
+    ->setDefaults(array('type' => 'konzilo_text'))
+    ->addMapping(new PropertyMapper('content.topheadline', 'field_konzilo_top_headline'))
+    ->addMapping(new PropertyMapper('content.headline', 'title'))
+    ->addMapping(new PropertyMapper('content.body', 'field_konzilo_body'))
+    ->addMapping(new PropertyMapper('content.lead', 'field_konzilo_lead'))
+    ->addMapping(new PropertyMapper('content.kicker', 'field_konzilo_kicker'));
 
-  $titleMapper = new PropertyMapper('title', 'title');
-  $createdMapper = new PropertyMapper("publishdate", "created");
-  $createdMapper->addFormatter($fix_date);
-  $mapper->addMapping($createdMapper);
-  $mapper->addMapping($titleMapper);
+  $mediaMapper = new PropertyMapper('content.media', 'field_konzilo_media');
+  $mediaMapper->addFormatter(function ($value) {
+    return array('url' => $value);
+  });
 
-  $partMapper = new EntityMapper();
+  $part_mappers['media'] = entity_mapper('konzilo_articlepart', 'node')
+    ->setDefaults(array('type' => 'konzilo_media'))
+    ->addMapping(new PropertyMapper('content.title', 'title'))
+    ->addMapping(new PropertyMapper('content.description', 'field_konzilo_body'))
+    ->addMapping($mediaMapper);
+
+  $part_mappers['image'] = entity_mapper('konzilo_articlepart', 'node')
+    ->setDefaults(array('type' => 'konzilo_image'))
+    ->addMapping(new PropertyMapper('content.headline', 'title'))
+    ->addMapping(new PropertyMapper('content.description', 'field_konzilo_body'));
+
+  $part_mapper = new ConditionalEntityMapper($part_mappers, function ($mappers, $from_entity) {
+    $type = $from_entity->get('type')->value();
+    return $mappers[$type];
+  });
+
+  $mapper->addMapping(new EntityListPropertyMapper('parts', 'field_konzilo_article_parts', $part_mapper));
+
+  return array('konzilo_article' => $mapper);
 }

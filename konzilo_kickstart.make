@@ -52,6 +52,9 @@ projects[variable][subdir] = contrib
 projects[entity][version] = 1.1
 projects[entity][subdir] = contrib
 
+projects[oembed][version] = 0.1-beta3
+projects[oembed][subdir] = contrib
+
 ;projects[views][version] = 3.7
 ;projects[views][subdir] = contrib
 

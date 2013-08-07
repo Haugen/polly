@@ -1,7 +1,11 @@
 name = Konzilo Article
 core = 7.x
 package = Features
+php = 5.2.4
+dependencies[] = entityreference
 dependencies[] = features
 features[features_api][] = api:2
+features[field_base][] = field_konzilo_article_parts
+features[field_instance][] = node-konzilo_article-field_konzilo_article_parts
 features[node][] = konzilo_article
 project path = profiles/konzilo_kickstart/modules/features

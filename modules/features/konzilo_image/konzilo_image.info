@@ -1,0 +1,12 @@
+name = Konzilo Image
+core = 7.x
+package = Features
+dependencies[] = entityreference
+dependencies[] = features
+dependencies[] = konzilo_base
+dependencies[] = text
+features[features_api][] = api:2
+features[field_instance][] = node-konzilo_image-field_konzilo_body
+features[field_instance][] = node-konzilo_image-field_konzilo_image
+features[node][] = konzilo_image
+project path = profiles/konzilo_kickstart/modules/features

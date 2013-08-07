@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Konzilo Media feature.
+ */
+
+include_once 'konzilo_media.features.inc';

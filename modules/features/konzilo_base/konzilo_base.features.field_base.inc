@@ -141,11 +141,11 @@ function konzilo_base_field_default_field_bases() {
     'entity_types' => array(),
     'field_name' => 'field_konzilo_image',
     'foreign keys' => array(
-      'node' => array(
+      'file_managed' => array(
         'columns' => array(
-          'target_id' => 'nid',
+          'target_id' => 'fid',
         ),
-        'table' => 'node',
+        'table' => 'file_managed',
       ),
     ),
     'indexes' => array(
@@ -264,11 +264,11 @@ function konzilo_base_field_default_field_bases() {
     'entity_types' => array(),
     'field_name' => 'field_konzilo_user_ref',
     'foreign keys' => array(
-      'node' => array(
+      'users' => array(
         'columns' => array(
-          'target_id' => 'nid',
+          'target_id' => 'uid',
         ),
-        'table' => 'node',
+        'table' => 'users',
       ),
     ),
     'indexes' => array(

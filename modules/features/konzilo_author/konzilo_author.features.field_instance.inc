@@ -46,7 +46,46 @@ function konzilo_author_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => -3,
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'node-konzilo_author-field_konzilo_email'
+  $field_instances['node-konzilo_author-field_konzilo_email'] = array(
+    'bundle' => 'konzilo_author',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'email',
+        'settings' => array(),
+        'type' => 'email_default',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_konzilo_email',
+    'label' => 'Email',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'email',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'email_textfield',
+      'weight' => 2,
     ),
   );
 
@@ -89,7 +128,7 @@ function konzilo_author_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => -1,
+      'weight' => 3,
     ),
   );
 
@@ -132,13 +171,14 @@ function konzilo_author_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => -2,
+      'weight' => 4,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
   t('Bio');
+  t('Email');
   t('Image');
   t('User');
 

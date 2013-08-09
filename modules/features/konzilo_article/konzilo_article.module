@@ -7,37 +7,49 @@
 include_once 'konzilo_article.features.inc';
 
 function konzilo_article_entity_mappers() {
-  $mapper = entity_mapper('konzilo_article', 'node')
+  $mapper = entity_mapper('article', 'konzilo_article', 'node')
     ->setDefaults(array('type' => 'konzilo_article'))
     ->addMapping(new PropertyMapper('title', 'title'));
+
+  $authorMapper = entity_mapper('author', 'konzilo_author', 'node')
+    ->setDefaults(array('type' => 'konzilo_author'))
+    ->addMapping(new PropertyMapper('name', 'title'))
+    ->addMapping(new PropertyMapper('about', 'field_konzilo_body'))
+    ->addMapping(new PropertyMapper('email', 'field_konzilo_email'))
+    ->addMapping(new FileListPropertyMapper('image', 'field_konzilo_image'));
+
   $part_mappers = array();
-  $part_mappers['text'] = entity_mapper('konzilo_articlepart', 'node')
+  $part_mappers['text'] = entity_mapper('text', 'konzilo_articlepart', 'node')
     ->setDefaults(array('type' => 'konzilo_text'))
     ->addMapping(new PropertyMapper('content.topheadline', 'field_konzilo_top_headline'))
     ->addMapping(new PropertyMapper('content.headline', 'title'))
     ->addMapping(new PropertyMapper('content.body', 'field_konzilo_body'))
     ->addMapping(new PropertyMapper('content.lead', 'field_konzilo_lead'))
-    ->addMapping(new PropertyMapper('content.kicker', 'field_konzilo_kicker'));
+    ->addMapping(new PropertyMapper('content.kicker', 'field_konzilo_kicker'))
+    ->addMapping(new EntityPropertyMapper('byline', 'field_konzilo_author', $authorMapper));
 
   $mediaMapper = new PropertyMapper('content.media', 'field_konzilo_media');
   $mediaMapper->addFormatter(function ($value) {
     return array('url' => $value);
   });
 
-  $part_mappers['media'] = entity_mapper('konzilo_articlepart', 'node')
+  $part_mappers['media'] = entity_mapper('media', 'konzilo_articlepart', 'node')
     ->setDefaults(array('type' => 'konzilo_media'))
     ->addMapping(new PropertyMapper('content.title', 'title'))
     ->addMapping(new PropertyMapper('content.description', 'field_konzilo_body'))
-    ->addMapping($mediaMapper);
+    ->addMapping($mediaMapper)
+    ->addMapping(new EntityPropertyMapper('byline', 'field_konzilo_author', $authorMapper));
 
-  $part_mappers['image'] = entity_mapper('konzilo_articlepart', 'node')
+  $part_mappers['image'] = entity_mapper('image', 'konzilo_articlepart', 'node')
     ->setDefaults(array('type' => 'konzilo_image'))
     ->addMapping(new PropertyMapper('content.headline', 'title'))
-    ->addMapping(new PropertyMapper('content.description', 'field_konzilo_body'));
+    ->addMapping(new PropertyMapper('content.description', 'field_konzilo_body'))
+    ->addMapping(new EntityPropertyMapper('byline', 'field_konzilo_author', $authorMapper))
+    ->addMapping(new FileListPropertyMapper('content.images', 'field_konzilo_image'));
 
   $part_mapper = new ConditionalEntityMapper($part_mappers, function ($mappers, $from_entity) {
     $type = $from_entity->get('type')->value();
-    return $mappers[$type];
+    return (isset($mappers[$type])) ? $mappers[$type] : NULL;
   });
 
   $mapper->addMapping(new EntityListPropertyMapper('parts', 'field_konzilo_article_parts', $part_mapper));

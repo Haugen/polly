@@ -49,6 +49,9 @@ projects[token][subdir] = contrib
 projects[variable][version] = 2.2
 projects[variable][subdir] = contrib
 
+projects[email][version] = 1.2
+projects[email][subdir] = contrib
+
 projects[entity][version] = 1.1
 projects[entity][subdir] = contrib
 

@@ -72,8 +72,21 @@ function konzilo_endpoint_default_services_endpoint() {
           'enabled' => '1',
           'settings' => array(
             'oauth2_server' => array(
+              'require_authentication' => '1',
               'scope' => '',
-              'require_authentication' => NULL,
+            ),
+          ),
+        ),
+      ),
+    ),
+    'pubsettings' => array(
+      'operations' => array(
+        'create' => array(
+          'enabled' => '1',
+          'settings' => array(
+            'oauth2_server' => array(
+              'require_authentication' => '1',
+              'scope' => '',
             ),
           ),
         ),

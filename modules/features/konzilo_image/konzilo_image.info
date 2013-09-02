@@ -6,6 +6,7 @@ dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = konzilo_base
 dependencies[] = text
+dependencies[] = file_entity
 features[features_api][] = api:2
 features[field_instance][] = node-konzilo_image-field_konzilo_author
 features[field_instance][] = node-konzilo_image-field_konzilo_body

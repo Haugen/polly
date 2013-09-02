@@ -6,6 +6,7 @@ dependencies[] = metatag
 dependencies[] = path
 dependencies[] = pathauto
 dependencies[] = token
+dependencies[] = transliteration
 dependencies[] = xmlsitemap
 dependencies[] = xmlsitemap_custom
 dependencies[] = xmlsitemap_node

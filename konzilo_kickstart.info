@@ -25,3 +25,4 @@ dependencies[] = konzilo_text
 dependencies[] = konzilo_author
 dependencies[] = konzilo_image
 dependencies[] = konzilo_media
+dependencies[] = konzilo_seo

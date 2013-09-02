@@ -18,4 +18,7 @@ features[field_base][] = field_konzilo_lead
 features[field_base][] = field_konzilo_top_headline
 features[field_base][] = field_konzilo_user_ref
 features[user_permission][] = access content
+features[user_role][] = administrator
+features[user_role][] = editor
+features[user_role][] = writer
 project path = profiles/konzilo_kickstart/modules/features

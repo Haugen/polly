@@ -16,7 +16,7 @@ projects[devel][subdir] = contrib
 projects[elysia_cron][version] = 2.1
 projects[elysia_cron][subdir] = contrib
 
-projects[entity][version] = 1.1
+projects[entity][version] = 1.2
 projects[entity][subdir] = contrib
 
 projects[entity_mapper][type] = module
@@ -33,10 +33,10 @@ projects[entityreference][subdir] = contrib
 projects[email][version] = 1.2
 projects[email][subdir] = contrib
 
-projects[features][version] = 2.0-rc1
+projects[features][version] = 2.0-rc3
 projects[features][subdir] = contrib
 
-projects[file_entity][version] = 2.0-unstable7
+projects[file_entity][version] = 2.0-alpha2
 projects[file_entity][subdir] = contrib
 
 projects[globalredirect][version] = 1.5

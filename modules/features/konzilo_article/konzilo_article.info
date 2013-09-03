@@ -6,7 +6,6 @@ dependencies[] = defaultconfig
 dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = metatag
-dependencies[] = panelizer
 dependencies[] = strongarm
 features[ctools][] = panelizer:panelizer:1
 features[ctools][] = strongarm:strongarm:1

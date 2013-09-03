@@ -10,6 +10,9 @@ projects[ctools][subdir] = contrib
 projects[diff][version] = 3.2
 projects[diff][subdir] = contrib
 
+projects[defaultconfig][version] = 1.0-alpha9
+projects[defaultconfig][subdir] = contrib
+
 projects[devel][version] = 1.3
 projects[devel][subdir] = contrib
 
@@ -74,6 +77,9 @@ projects[oembed][subdir] = contrib
 
 projects[panels][version] = 3.3
 projects[panels][subdir] = contrib
+
+projects[panopoly_theme][version] = 1.0-rc5
+projects[panopoly_theme][subdir] = contrib
 
 projects[panelizer][version] = 3.1
 projects[panelizer][subdir] = contrib

@@ -9,6 +9,8 @@ dependencies[] = help
 dependencies[] = menu
 dependencies[] = taxonomy
 dependencies[] = toolbar
+
+; Contrib
 dependencies[] = oauth2_server
 dependencies[] = konzilo
 dependencies[] = panels
@@ -16,6 +18,8 @@ dependencies[] = ctools
 dependencies[] = libraries
 dependencies[] = oembed
 dependencies[] = oembedfield
+dependencies[] = strongarm
+dependencies[] = defaultconfig
 
 ; Features
 dependencies[] = konzilo_endpoint

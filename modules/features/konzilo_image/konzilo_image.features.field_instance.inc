@@ -26,6 +26,12 @@ function konzilo_image_field_default_field_instances() {
         'type' => 'entityreference_label',
         'weight' => 3,
       ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -66,6 +72,12 @@ function konzilo_image_field_default_field_instances() {
         'settings' => array(),
         'type' => 'text_default',
         'weight' => 2,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -108,6 +120,12 @@ function konzilo_image_field_default_field_instances() {
         ),
         'type' => 'entityreference_label',
         'weight' => 1,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',

@@ -23,6 +23,7 @@ function konzilo_article_entity_mappers() {
   $body_mapper->addFormatter(function ($value){
     return array('value' => $value, 'format' => 'markdown');
   });
+
   $part_mappers['text'] = entity_mapper('text', 'konzilo_articlepart', 'node')
     ->setDefaults(array('type' => 'konzilo_text'))
     ->addMapping(new PropertyMapper('content.topheadline', 'field_konzilo_top_headline'))
@@ -31,7 +32,6 @@ function konzilo_article_entity_mappers() {
     ->addMapping(new PropertyMapper('content.lead', 'field_konzilo_lead'))
     ->addMapping(new PropertyMapper('content.kicker', 'field_konzilo_kicker'))
     ->addMapping(new EntityPropertyMapper('byline', 'field_konzilo_author', $authorMapper));
-
   $mediaMapper = new PropertyMapper('content.media', 'field_konzilo_media');
   $mediaMapper->addFormatter(function ($value) {
     return array('url' => $value);
@@ -58,5 +58,5 @@ function konzilo_article_entity_mappers() {
 
   $mapper->addMapping(new EntityListPropertyMapper('parts', 'field_konzilo_article_parts', $part_mapper));
 
-  return array('konzilo_article' => $mapper);
+  return array('konzilo_article' => $mapper, 'konzilo_file' => new FileEntityMapper('file'));
 }

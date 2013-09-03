@@ -12,6 +12,7 @@ projects[diff][subdir] = contrib
 
 projects[defaultconfig][version] = 1.0-alpha9
 projects[defaultconfig][subdir] = contrib
+projects[defaultconfig][patch][1900574] = https://drupal.org/files/1900574.defaultconfig.undefinedindex_11.patch
 
 projects[devel][version] = 1.3
 projects[devel][subdir] = contrib

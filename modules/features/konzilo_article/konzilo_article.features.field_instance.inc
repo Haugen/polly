@@ -26,6 +26,12 @@ function konzilo_article_field_default_field_instances() {
         'type' => 'entityreference_label',
         'weight' => 0,
       ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),

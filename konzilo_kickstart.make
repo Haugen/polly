@@ -22,6 +22,7 @@ projects[elysia_cron][subdir] = contrib
 
 projects[entity][version] = 1.2
 projects[entity][subdir] = contrib
+projects[entity][patch][1780646] = https://drupal.org/files/1780646-202-entity-node-access_0.patch
 
 projects[entity_mapper][type] = module
 projects[entity_mapper][download][type] = git

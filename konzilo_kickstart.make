@@ -1,6 +1,11 @@
 api = 2
 core = 7.15
 
+projects[air][type] = module
+projects[air][download][type] = git
+projects[air][download][url] = git@github.com:konzilo/air.git
+projects[air][subdir] = contrib
+
 projects[coder][version] = 2.0-beta2
 projects[coder][subdir] = contrib
 

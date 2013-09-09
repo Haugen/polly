@@ -23,6 +23,9 @@ dependencies[] = oembed
 dependencies[] = oembedfield
 dependencies[] = strongarm
 dependencies[] = defaultconfig
+dependencies[] = linkit
+dependencies[] = pathologic
+
 
 ; Features
 dependencies[] = konzilo_endpoint
@@ -32,4 +35,5 @@ dependencies[] = konzilo_text
 dependencies[] = konzilo_author
 dependencies[] = konzilo_image
 dependencies[] = konzilo_media
+dependencies[] = konzilo_promo
 dependencies[] = konzilo_seo

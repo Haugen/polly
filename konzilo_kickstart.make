@@ -66,6 +66,9 @@ projects[libraries][subdir] = contrib
 projects[link][version] = 1.1
 projects[link][subdir] = contrib
 
+projects[linkit][version] = 2.6
+projects[linkit][subdir] = contrib
+
 projects[markdown][version] = 1.2
 projects[markdown][subdir] = contrib
 
@@ -93,6 +96,9 @@ projects[panelizer][subdir] = contrib
 
 projects[pathauto][version] = 1.2
 projects[pathauto][subdir] = contrib
+
+projects[pathologic][version] = 2.11
+projects[pathologic][subdir] = contrib
 
 ; We need to patch services for oauth2_server to work.
 projects[services][type] = module

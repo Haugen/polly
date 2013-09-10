@@ -20,4 +20,5 @@ features[field_instance][] = node-konzilo_author-field_konzilo_email
 features[field_instance][] = node-konzilo_author-field_konzilo_image
 features[field_instance][] = node-konzilo_author-field_konzilo_user_ref
 features[node][] = konzilo_author
+features[variable][] = field_bundle_settings_node__konzilo_author
 project path = profiles/konzilo_kickstart/modules/features

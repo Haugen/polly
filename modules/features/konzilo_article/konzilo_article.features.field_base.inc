@@ -38,7 +38,12 @@ function konzilo_article_field_default_field_bases() {
         'sort' => array(
           'type' => 'none',
         ),
-        'target_bundles' => array(),
+        'target_bundles' => array(
+          'konzilo_author' => 'konzilo_author',
+          'konzilo_image' => 'konzilo_image',
+          'konzilo_media' => 'konzilo_media',
+          'konzilo_text' => 'konzilo_text',
+        ),
       ),
       'target_type' => 'node',
     ),

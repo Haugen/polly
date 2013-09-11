@@ -27,8 +27,8 @@ function konzilo_article_defaultconfig_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'xmlsitemap_settings_node_konzilo_article';
   $strongarm->value = array(
-    'status' => '0',
-    'priority' => '0.5',
+    'status' => '1',
+    'priority' => '0.8',
   );
   $export['xmlsitemap_settings_node_konzilo_article'] = $strongarm;
 

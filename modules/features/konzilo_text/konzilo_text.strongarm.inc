@@ -66,5 +66,44 @@ function konzilo_text_strongarm() {
   );
   $export['field_bundle_settings_node__konzilo_text'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'menu_options_konzilo_text';
+  $strongarm->value = array(
+    0 => 'main-menu',
+  );
+  $export['menu_options_konzilo_text'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'menu_parent_konzilo_text';
+  $strongarm->value = 'main-menu:0';
+  $export['menu_parent_konzilo_text'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_options_konzilo_text';
+  $strongarm->value = array(
+    0 => 'status',
+  );
+  $export['node_options_konzilo_text'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_preview_konzilo_text';
+  $strongarm->value = '1';
+  $export['node_preview_konzilo_text'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_submitted_konzilo_text';
+  $strongarm->value = 1;
+  $export['node_submitted_konzilo_text'] = $strongarm;
+
   return $export;
 }

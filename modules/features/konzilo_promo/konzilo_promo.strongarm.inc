@@ -14,7 +14,7 @@ function konzilo_promo_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_konzilo_promo';
-  $strongarm->value = 'edit-submission';
+  $strongarm->value = 'edit-panelizer';
   $export['additional_settings__active_tab_konzilo_promo'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -109,7 +109,6 @@ function konzilo_promo_strongarm() {
   $strongarm->name = 'node_options_konzilo_promo';
   $strongarm->value = array(
     0 => 'status',
-    1 => 'promote',
   );
   $export['node_options_konzilo_promo'] = $strongarm;
 
@@ -124,7 +123,7 @@ function konzilo_promo_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_submitted_konzilo_promo';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['node_submitted_konzilo_promo'] = $strongarm;
 
   $strongarm = new stdClass();

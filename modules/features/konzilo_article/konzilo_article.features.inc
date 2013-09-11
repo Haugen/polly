@@ -29,7 +29,7 @@ function konzilo_article_node_info() {
       'base' => 'node_content',
       'description' => t('Articles are the main container for different kinds of content.'),
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Page name'),
       'help' => '',
     ),
   );

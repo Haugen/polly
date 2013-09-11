@@ -14,7 +14,7 @@ function konzilo_article_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_konzilo_article';
-  $strongarm->value = 'edit-panelizer';
+  $strongarm->value = 'edit-xmlsitemap';
   $export['additional_settings__active_tab_konzilo_article'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -108,7 +108,6 @@ function konzilo_article_strongarm() {
   $strongarm->name = 'node_options_konzilo_article';
   $strongarm->value = array(
     0 => 'status',
-    1 => 'promote',
   );
   $export['node_options_konzilo_article'] = $strongarm;
 
@@ -143,12 +142,7 @@ function konzilo_article_strongarm() {
         'default' => 0,
         'choice' => 0,
       ),
-      'teaser' => array(
-        'status' => 0,
-        'default' => 0,
-        'choice' => 0,
-      ),
-      'featured' => array(
+      'konzilo_article' => array(
         'status' => 0,
         'default' => 0,
         'choice' => 0,

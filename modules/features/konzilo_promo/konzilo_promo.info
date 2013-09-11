@@ -1,6 +1,7 @@
 name = Konzilo promo
 core = 7.x
 package = Features
+dependencies[] = air
 dependencies[] = ctools
 dependencies[] = ds
 dependencies[] = entityreference

@@ -88,6 +88,13 @@ function konzilo_promo_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 2,
       ),
+      'konzilo_promo' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -146,6 +153,16 @@ function konzilo_promo_field_default_field_instances() {
         'type' => 'image',
         'weight' => 0,
       ),
+      'konzilo_promo' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => 'medium',
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -188,10 +205,9 @@ function konzilo_promo_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
-        'module' => 'link',
+        'label' => 'hidden',
         'settings' => array(),
-        'type' => 'link_default',
+        'type' => 'hidden',
         'weight' => 3,
       ),
       'featured' => array(
@@ -205,6 +221,12 @@ function konzilo_promo_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
+        'weight' => 3,
+      ),
+      'konzilo_promo' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 3,
       ),
       'teaser' => array(
@@ -273,6 +295,13 @@ function konzilo_promo_field_default_field_instances() {
         'weight' => 0,
       ),
       'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'konzilo_promo' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),

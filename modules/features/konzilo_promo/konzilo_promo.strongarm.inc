@@ -45,13 +45,13 @@ function konzilo_promo_strongarm() {
   $strongarm->value = array(
     'view_modes' => array(
       'teaser' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'featured' => array(
         'custom_settings' => FALSE,
       ),
       'full' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'rss' => array(
         'custom_settings' => FALSE,
@@ -60,6 +60,12 @@ function konzilo_promo_strongarm() {
         'custom_settings' => FALSE,
       ),
       'token' => array(
+        'custom_settings' => FALSE,
+      ),
+      'konzilo_promo' => array(
+        'custom_settings' => TRUE,
+      ),
+      'revision' => array(
         'custom_settings' => FALSE,
       ),
     ),

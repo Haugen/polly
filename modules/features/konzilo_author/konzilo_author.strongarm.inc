@@ -17,10 +17,10 @@ function konzilo_author_strongarm() {
   $strongarm->value = array(
     'view_modes' => array(
       'full' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'teaser' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'rss' => array(
         'custom_settings' => FALSE,
@@ -35,7 +35,7 @@ function konzilo_author_strongarm() {
         'custom_settings' => FALSE,
       ),
       'konzilo_author' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'konzilo_article' => array(
         'custom_settings' => FALSE,
@@ -56,6 +56,9 @@ function konzilo_author_strongarm() {
         'custom_settings' => FALSE,
       ),
       'revision' => array(
+        'custom_settings' => FALSE,
+      ),
+      'konzilo_page' => array(
         'custom_settings' => FALSE,
       ),
     ),

@@ -14,7 +14,7 @@ function konzilo_base_filter_default_formats() {
   $formats['markdown'] = array(
     'format' => 'markdown',
     'name' => 'Markdown',
-    'cache' => 1,
+    'cache' => 0,
     'status' => 1,
     'weight' => 0,
     'filters' => array(

@@ -21,7 +21,7 @@ function konzilo_promo_node_info() {
     'konzilo_promo' => array(
       'name' => t('Promo'),
       'base' => 'node_content',
-      'description' => '',
+      'description' => t('A promo that can be placed on different pages.'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',

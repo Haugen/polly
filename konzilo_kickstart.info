@@ -9,6 +9,7 @@ dependencies[] = help
 dependencies[] = menu
 dependencies[] = taxonomy
 dependencies[] = toolbar
+dependencies[] = contextual
 
 ; Contrib
 dependencies[] = oauth2_server
@@ -25,6 +26,7 @@ dependencies[] = strongarm
 dependencies[] = defaultconfig
 dependencies[] = linkit
 dependencies[] = pathologic
+dependencies[] = inline_entity_form
 
 
 ; Features

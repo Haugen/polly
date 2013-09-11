@@ -55,6 +55,9 @@ projects[globalredirect][subdir] = contrib
 projects[i18n][version] = 1.9
 projects[i18n][subdir] = contrib
 
+projects[inline_entity_form][version] = 1.3
+projects[inline_entity_form][subdir] = contrib
+
 projects[konzilo][type] = module
 projects[konzilo][download][type] = git
 projects[konzilo][download][url] = git@github.com:konzilo/drupal-konzilo.git

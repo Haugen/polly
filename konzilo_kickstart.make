@@ -22,6 +22,9 @@ projects[defaultconfig][patch][1900574] = https://drupal.org/files/1900574.defau
 projects[devel][version] = 1.3
 projects[devel][subdir] = contrib
 
+projects[ds][version] = 2.6
+projects[ds][subdir] = contrib
+
 projects[elysia_cron][version] = 2.1
 projects[elysia_cron][subdir] = contrib
 

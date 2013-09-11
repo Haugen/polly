@@ -68,6 +68,27 @@ function konzilo_promo_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'konzilo_article' => array(
+        'custom_settings' => FALSE,
+      ),
+      'konzilo_article_parts' => array(
+        'custom_settings' => FALSE,
+      ),
+      'konzilo_author' => array(
+        'custom_settings' => FALSE,
+      ),
+      'konzilo_image' => array(
+        'custom_settings' => FALSE,
+      ),
+      'konzilo_media' => array(
+        'custom_settings' => FALSE,
+      ),
+      'konzilo_page' => array(
+        'custom_settings' => FALSE,
+      ),
+      'konzilo_text' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

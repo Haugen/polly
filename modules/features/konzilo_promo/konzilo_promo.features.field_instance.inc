@@ -212,8 +212,9 @@ function konzilo_promo_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
+        'module' => 'link',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'link_default',
         'weight' => 3,
       ),
       'featured' => array(
@@ -231,8 +232,9 @@ function konzilo_promo_field_default_field_instances() {
       ),
       'konzilo_promo' => array(
         'label' => 'hidden',
+        'module' => 'link',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'link_default',
         'weight' => 3,
       ),
       'teaser' => array(
@@ -243,6 +245,7 @@ function konzilo_promo_field_default_field_instances() {
         'weight' => 1,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_konzilo_promo_link',
     'label' => 'Link',
@@ -264,9 +267,9 @@ function konzilo_promo_field_default_field_instances() {
         'insert_plugin' => 'raw_url',
       ),
       'rel_remove' => 'default',
-      'title' => 'none',
+      'title' => 'value',
       'title_maxlength' => 128,
-      'title_value' => '',
+      'title_value' => 'Read more...',
       'url' => 0,
       'user_register_form' => FALSE,
       'validate_url' => 1,

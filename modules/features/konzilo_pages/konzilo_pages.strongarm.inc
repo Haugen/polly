@@ -166,12 +166,7 @@ function konzilo_pages_strongarm() {
         'default' => 0,
         'choice' => 0,
       ),
-      'teaser' => array(
-        'status' => 0,
-        'default' => 0,
-        'choice' => 0,
-      ),
-      'featured' => array(
+      'konzilo_page' => array(
         'status' => 0,
         'default' => 0,
         'choice' => 0,

@@ -21,13 +21,6 @@ function konzilo_promo_defaultconfig_features() {
 function konzilo_promo_defaultconfig_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: 'administer panelizer node konzilo_promo defaults'.
-  $permissions['administer panelizer node konzilo_promo defaults'] = array(
-    'name' => 'administer panelizer node konzilo_promo defaults',
-    'roles' => array(),
-    'module' => 'panelizer',
-  );
-
   // Exported permission: 'create konzilo_promo content'.
   $permissions['create konzilo_promo content'] = array(
     'name' => 'create konzilo_promo content',

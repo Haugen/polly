@@ -36,4 +36,5 @@ features[variable][] = node_options_konzilo_article
 features[variable][] = node_preview_konzilo_article
 features[variable][] = node_submitted_konzilo_article
 features[variable][] = panelizer_defaults_node_konzilo_article
+features_exclude[dependencies][konzilo_promo] = konzilo_promo
 project path = profiles/konzilo_kickstart/modules/features

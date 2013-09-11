@@ -58,7 +58,7 @@ function konzilo_article_field_default_field_instances() {
         ),
       ),
       'type' => 'inline_entity_form',
-      'weight' => -4,
+      'weight' => 1,
     ),
   );
 

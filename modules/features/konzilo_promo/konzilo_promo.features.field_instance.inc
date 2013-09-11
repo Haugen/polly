@@ -10,6 +10,57 @@
 function konzilo_promo_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'node-konzilo_article-field_konzilo_promos'
+  $field_instances['node-konzilo_article-field_konzilo_promos'] = array(
+    'bundle' => 'konzilo_article',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 1,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_konzilo_promos',
+    'label' => 'Promos',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'inline_entity_form',
+      'settings' => array(
+        'fields' => array(),
+        'type_settings' => array(
+          'allow_existing' => 1,
+          'delete_references' => 0,
+          'match_operator' => 'CONTAINS',
+        ),
+      ),
+      'type' => 'inline_entity_form',
+      'weight' => 2,
+    ),
+  );
+
   // Exported field_instance: 'node-konzilo_promo-field_konzilo_lead'
   $field_instances['node-konzilo_promo-field_konzilo_lead'] = array(
     'bundle' => 'konzilo_promo',
@@ -260,6 +311,7 @@ function konzilo_promo_field_default_field_instances() {
   t('Image');
   t('Lead');
   t('Link');
+  t('Promos');
   t('Top headline');
 
   return $field_instances;

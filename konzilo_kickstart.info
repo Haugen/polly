@@ -27,6 +27,7 @@ dependencies[] = defaultconfig
 dependencies[] = linkit
 dependencies[] = pathologic
 dependencies[] = inline_entity_form
+dependencies[] = ds
 
 
 ; Features
@@ -38,4 +39,5 @@ dependencies[] = konzilo_author
 dependencies[] = konzilo_image
 dependencies[] = konzilo_media
 dependencies[] = konzilo_promo
+dependencies[] = konzilo_pages
 dependencies[] = konzilo_seo

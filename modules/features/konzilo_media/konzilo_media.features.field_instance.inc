@@ -32,6 +32,16 @@ function konzilo_media_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'konzilo_media' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 1,
+          'view_mode' => 'konzilo_author',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 2,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -78,6 +88,13 @@ function konzilo_media_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'konzilo_media' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -127,6 +144,16 @@ function konzilo_media_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'konzilo_media' => array(
+        'label' => 'hidden',
+        'module' => 'oembedfield',
+        'settings' => array(
+          'maxheight' => '',
+          'maxwidth' => '',
+        ),
+        'type' => 'oembed_default',
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',

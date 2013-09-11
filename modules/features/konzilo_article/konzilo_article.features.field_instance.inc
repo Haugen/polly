@@ -32,6 +32,23 @@ function konzilo_article_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'konzilo_article' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 1,
+          'view_mode' => 'konzilo_article_parts',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 0,
+      ),
+      'konzilo_article_parts' => array(
+        'label' => 'hidden',
+        'module' => 'air',
+        'settings' => array(),
+        'type' => 'air_entityreference',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -39,6 +56,7 @@ function konzilo_article_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_konzilo_article_parts',
     'label' => 'Article parts',

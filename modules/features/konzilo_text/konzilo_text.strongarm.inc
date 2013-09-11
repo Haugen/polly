@@ -17,13 +17,13 @@ function konzilo_text_strongarm() {
   $strongarm->value = array(
     'view_modes' => array(
       'teaser' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'featured' => array(
         'custom_settings' => FALSE,
       ),
       'full' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'rss' => array(
         'custom_settings' => FALSE,
@@ -32,6 +32,30 @@ function konzilo_text_strongarm() {
         'custom_settings' => FALSE,
       ),
       'token' => array(
+        'custom_settings' => FALSE,
+      ),
+      'konzilo_text' => array(
+        'custom_settings' => TRUE,
+      ),
+      'konzilo_article' => array(
+        'custom_settings' => FALSE,
+      ),
+      'konzilo_article_parts' => array(
+        'custom_settings' => FALSE,
+      ),
+      'konzilo_author' => array(
+        'custom_settings' => FALSE,
+      ),
+      'konzilo_image' => array(
+        'custom_settings' => FALSE,
+      ),
+      'konzilo_media' => array(
+        'custom_settings' => FALSE,
+      ),
+      'konzilo_promo' => array(
+        'custom_settings' => FALSE,
+      ),
+      'revision' => array(
         'custom_settings' => FALSE,
       ),
     ),

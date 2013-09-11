@@ -1,21 +1,24 @@
 <?php
 /**
  * @file
- * konzilo_author.strongarm.inc
+ * konzilo_media.strongarm.inc
  */
 
 /**
  * Implements hook_strongarm().
  */
-function konzilo_author_strongarm() {
+function konzilo_media_strongarm() {
   $export = array();
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'field_bundle_settings_node__konzilo_author';
+  $strongarm->name = 'field_bundle_settings_node__konzilo_media';
   $strongarm->value = array(
     'view_modes' => array(
+      'konzilo_media' => array(
+        'custom_settings' => TRUE,
+      ),
       'full' => array(
         'custom_settings' => FALSE,
       ),
@@ -34,19 +37,16 @@ function konzilo_author_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
-      'konzilo_author' => array(
-        'custom_settings' => TRUE,
-      ),
       'konzilo_article' => array(
         'custom_settings' => FALSE,
       ),
       'konzilo_article_parts' => array(
         'custom_settings' => FALSE,
       ),
-      'konzilo_image' => array(
+      'konzilo_author' => array(
         'custom_settings' => FALSE,
       ),
-      'konzilo_media' => array(
+      'konzilo_image' => array(
         'custom_settings' => FALSE,
       ),
       'konzilo_promo' => array(
@@ -64,7 +64,7 @@ function konzilo_author_strongarm() {
       'display' => array(),
     ),
   );
-  $export['field_bundle_settings_node__konzilo_author'] = $strongarm;
+  $export['field_bundle_settings_node__konzilo_media'] = $strongarm;
 
   return $export;
 }

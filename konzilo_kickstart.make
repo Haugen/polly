@@ -144,3 +144,8 @@ libraries[oauth2-server-php][download][type] = get
 libraries[oauth2-server-php][download][url] = https://github.com/bshaffer/oauth2-server-php/archive/v0.8.tar.gz
 libraries[oauth2-server-php][destination] = libraries
 
+projects[adaptivetheme][type] = theme
+projects[adaptivetheme][version] = 3.1
+
+projects[at_panels_everywhere][type] = theme
+projects[at_panels_everywhere][version] = 3.0-rc1

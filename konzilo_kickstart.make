@@ -94,6 +94,9 @@ projects[oembed][subdir] = contrib
 projects[panels][version] = 3.3
 projects[panels][subdir] = contrib
 
+projects[panels_everywhere][version] = 1.0-rc1
+projects[panels_everywhere][subdir] = contrib
+
 projects[panopoly_theme][version] = 1.0-rc5
 projects[panopoly_theme][subdir] = contrib
 

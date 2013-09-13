@@ -28,6 +28,7 @@ dependencies[] = linkit
 dependencies[] = pathologic
 dependencies[] = inline_entity_form
 dependencies[] = ds
+dependencies[] = air
 
 
 ; Features

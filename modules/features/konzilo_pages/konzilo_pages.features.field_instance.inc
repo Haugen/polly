@@ -123,7 +123,7 @@ function konzilo_pages_field_default_field_instances() {
         'enable' => 0,
         'insert_plugin' => '',
       ),
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -194,7 +194,7 @@ function konzilo_pages_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'inline_entity_form',
+      'module' => 'entityreference',
       'settings' => array(
         'fields' => array(),
         'match_operator' => 'CONTAINS',
@@ -202,7 +202,7 @@ function konzilo_pages_field_default_field_instances() {
         'size' => 60,
         'type_settings' => array(),
       ),
-      'type' => 'inline_entity_form',
+      'type' => 'entityreference_autocomplete',
       'weight' => 5,
     ),
   );

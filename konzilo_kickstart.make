@@ -135,6 +135,8 @@ projects[variable][subdir] = contrib
 projects[wysiwyg][type] = module
 projects[wysiwyg][version] = 2.2
 projects[wysiwyg][subdir] = contrib
+projects[wysiwyg][download][type] = git
+projects[wysiwyg][download][revision] = ee64524
 
 projects[xmlsitemap][version] = 2.0-rc2
 projects[xmlsitemap][subdir] = contrib

@@ -27,7 +27,7 @@ function konzilo_pages_node_info() {
     'konzilo_page' => array(
       'name' => t('Page'),
       'base' => 'node_content',
-      'description' => '',
+      'description' => t('Static pages.'),
       'has_title' => '1',
       'title_label' => t('Page name'),
       'help' => '',

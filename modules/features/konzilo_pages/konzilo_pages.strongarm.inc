@@ -14,7 +14,7 @@ function konzilo_pages_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_konzilo_page';
-  $strongarm->value = 'edit-panelizer';
+  $strongarm->value = 'edit-submission';
   $export['additional_settings__active_tab_konzilo_page'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -166,7 +166,12 @@ function konzilo_pages_strongarm() {
         'default' => 0,
         'choice' => 0,
       ),
-      'konzilo_page' => array(
+      'full' => array(
+        'status' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'teaser' => array(
         'status' => 0,
         'default' => 0,
         'choice' => 0,

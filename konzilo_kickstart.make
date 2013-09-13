@@ -1,5 +1,5 @@
 api = 2
-core = 7.15
+core = 7.23
 
 projects[air][type] = module
 projects[air][download][type] = git

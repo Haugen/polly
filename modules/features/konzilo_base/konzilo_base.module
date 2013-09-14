@@ -5,3 +5,12 @@
  */
 
 include_once 'konzilo_base.features.inc';
+
+/**
+ * Implementation of hook_ctools_plugin_directory()
+ */
+function konzilo_base_ctools_plugin_directory($module, $plugin) {
+  if (($module == 'panelizer'  || $module == 'page_manager' || $module == 'panels' || $module == 'ctools' || $module == 'stylizer') && !empty($plugin)) {
+    return "plugins/$plugin";
+  }
+}

@@ -40,7 +40,11 @@ function konzilo_pages_ds_layout_settings_info() {
       'field_konzilo_author' => 'ds_content',
       'field_konzilo_promos' => 'ds_content',
     ),
-    'classes' => array(),
+    'classes' => array(
+      'layout_class' => array(
+        '' => '',
+      ),
+    ),
     'wrappers' => array(
       'ds_content' => 'div',
     ),

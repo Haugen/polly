@@ -194,7 +194,7 @@ function konzilo_pages_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'entityreference',
+      'module' => 'inline_entity_form',
       'settings' => array(
         'fields' => array(),
         'match_operator' => 'CONTAINS',
@@ -202,7 +202,7 @@ function konzilo_pages_field_default_field_instances() {
         'size' => 60,
         'type_settings' => array(),
       ),
-      'type' => 'entityreference_autocomplete',
+      'type' => 'inline_entity_form',
       'weight' => 5,
     ),
   );

@@ -20,19 +20,21 @@ function konzilo_author_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_konzilo_body',
-        1 => 'field_konzilo_user_ref',
-        2 => 'field_konzilo_image',
-        3 => 'field_konzilo_email',
+        0 => 'field_konzilo_image',
+        1 => 'field_konzilo_body',
+        2 => 'field_konzilo_email',
       ),
     ),
     'fields' => array(
-      'field_konzilo_body' => 'ds_content',
-      'field_konzilo_user_ref' => 'ds_content',
       'field_konzilo_image' => 'ds_content',
+      'field_konzilo_body' => 'ds_content',
       'field_konzilo_email' => 'ds_content',
     ),
-    'classes' => array(),
+    'classes' => array(
+      'layout_class' => array(
+        '' => '',
+      ),
+    ),
     'wrappers' => array(
       'ds_content' => 'div',
     ),
@@ -55,18 +57,18 @@ function konzilo_author_ds_layout_settings_info() {
     'regions' => array(
       'ds_content' => array(
         0 => 'field_konzilo_image',
-        1 => 'field_konzilo_user_ref',
-        2 => 'field_konzilo_body',
-        3 => 'field_konzilo_email',
+        1 => 'field_konzilo_email',
       ),
     ),
     'fields' => array(
       'field_konzilo_image' => 'ds_content',
-      'field_konzilo_user_ref' => 'ds_content',
-      'field_konzilo_body' => 'ds_content',
       'field_konzilo_email' => 'ds_content',
     ),
-    'classes' => array(),
+    'classes' => array(
+      'layout_class' => array(
+        '' => '',
+      ),
+    ),
     'wrappers' => array(
       'ds_content' => 'div',
     ),

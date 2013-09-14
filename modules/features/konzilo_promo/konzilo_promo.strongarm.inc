@@ -89,6 +89,9 @@ function konzilo_promo_strongarm() {
       'konzilo_text' => array(
         'custom_settings' => FALSE,
       ),
+      'promo_yellow' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

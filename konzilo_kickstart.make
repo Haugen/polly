@@ -78,6 +78,9 @@ projects[linkit][subdir] = contrib
 projects[markdown][version] = 1.2
 projects[markdown][subdir] = contrib
 
+projects[media][version] = 2.0-alpha2
+projects[media][subdir] = contrib
+
 projects[metatag][version] = 1.0-beta7
 projects[metatag][subdir] = contrib
 

@@ -40,6 +40,9 @@ function konzilo_base_wysiwyg_default_profiles() {
         'linkit' => array(
           'linkit' => 1,
         ),
+        'drupal' => array(
+          'media' => 1,
+        ),
       ),
       'toolbarLocation' => 'top',
       'resize_enabled' => 1,

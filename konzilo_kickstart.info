@@ -21,6 +21,7 @@ dependencies[] = panels_ipe
 dependencies[] = ctools
 dependencies[] = libraries
 dependencies[] = oembed
+dependencies[] = media_oembed
 dependencies[] = oembedfield
 dependencies[] = strongarm
 dependencies[] = defaultconfig
@@ -29,6 +30,11 @@ dependencies[] = pathologic
 dependencies[] = inline_entity_form
 dependencies[] = ds
 dependencies[] = air
+dependencies[] = media
+dependencies[] = media_internet
+dependencies[] = media_wysiwyg_view_mode
+dependencies[] = views
+
 
 
 ; Features

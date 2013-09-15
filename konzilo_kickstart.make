@@ -135,6 +135,9 @@ projects[transliteration][subdir] = contrib
 projects[variable][version] = 2.2
 projects[variable][subdir] = contrib
 
+projects[views][version] = 3.7
+projects[views][subdir] = contrib
+
 projects[wysiwyg][type] = module
 projects[wysiwyg][version] = 2.2
 projects[wysiwyg][subdir] = contrib

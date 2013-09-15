@@ -28,11 +28,13 @@ dependencies[] = linkit
 dependencies[] = pathologic
 dependencies[] = inline_entity_form
 dependencies[] = ds
+dependencies[] = ds_extras
 dependencies[] = air
 dependencies[] = media
 dependencies[] = media_internet
 dependencies[] = media_wysiwyg_view_mode
 dependencies[] = views
+dependencies[] = menu_block
 
 
 

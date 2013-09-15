@@ -81,6 +81,9 @@ projects[markdown][subdir] = contrib
 projects[media][version] = 2.0-alpha2
 projects[media][subdir] = contrib
 
+projects[menu_block][version] = 2.3
+projects[menu_block][subdir] = contrib
+
 projects[metatag][version] = 1.0-beta7
 projects[metatag][subdir] = contrib
 

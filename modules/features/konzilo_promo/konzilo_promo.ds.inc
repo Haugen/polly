@@ -85,19 +85,6 @@ function konzilo_promo_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'konzilo_promo';
   $ds_fieldsetting->view_mode = 'teaser';
   $ds_fieldsetting->settings = array(
-    'field_konzilo_lead' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'ow' => TRUE,
-          'ow-el' => 'div',
-          'ow-cl' => 'leadtext',
-          'ow-def-cl' => FALSE,
-          'ow-at' => '',
-          'ow-def-at' => FALSE,
-        ),
-      ),
-    ),
     'field_konzilo_promo_image' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -108,38 +95,6 @@ function konzilo_promo_ds_field_settings_info() {
           'ow-def-cl' => FALSE,
           'ow-at' => '',
           'ow-def-at' => FALSE,
-        ),
-      ),
-    ),
-    'field_konzilo_promo_link' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'ow' => TRUE,
-          'ow-el' => 'div',
-          'ow-cl' => 'link',
-          'ow-def-cl' => FALSE,
-          'ow-at' => '',
-          'ow-def-at' => FALSE,
-        ),
-      ),
-    ),
-    'field_konzilo_top_headline' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'ow' => TRUE,
-          'ow-el' => 'div',
-          'ow-cl' => 'headline',
-          'ow-def-cl' => FALSE,
-          'ow-at' => '',
-          'ow-def-at' => FALSE,
-          'fi' => TRUE,
-          'fi-el' => 'h2',
-          'fi-cl' => 'title',
-          'fi-at' => '',
-          'fi-def-at' => FALSE,
-          'fi-odd-even' => FALSE,
         ),
       ),
     ),
@@ -200,18 +155,16 @@ function konzilo_promo_ds_layout_settings_info() {
     'regions' => array(
       'ds_content' => array(
         0 => 'field_konzilo_promo_image',
-        1 => 'field_konzilo_top_headline',
-        2 => 'field_konzilo_lead',
-        3 => 'field_konzilo_promo_link',
       ),
     ),
     'fields' => array(
       'field_konzilo_promo_image' => 'ds_content',
-      'field_konzilo_top_headline' => 'ds_content',
-      'field_konzilo_lead' => 'ds_content',
-      'field_konzilo_promo_link' => 'ds_content',
     ),
-    'classes' => array(),
+    'classes' => array(
+      'layout_class' => array(
+        '' => '',
+      ),
+    ),
     'wrappers' => array(
       'ds_content' => 'div',
     ),

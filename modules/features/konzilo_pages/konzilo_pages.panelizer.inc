@@ -239,6 +239,33 @@ function konzilo_pages_panelizer_defaults() {
     $pane = new stdClass();
     $pane->pid = 'new-7';
     $pane->panel = 'content';
+    $pane->type = 'node_links';
+    $pane->subtype = 'node_links';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+      'build_mode' => 'full',
+      'identifier' => '',
+      'link' => 1,
+      'context' => 'panelizer',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_class' => 'link-wrapper',
+    );
+    $pane->extras = array();
+    $pane->position = 6;
+    $pane->locks = array();
+    $display->content['new-7'] = $pane;
+    $display->panels['content'][6] = 'new-7';
+    $pane = new stdClass();
+    $pane->pid = 'new-8';
+    $pane->panel = 'content';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_konzilo_author';
     $pane->shown = TRUE;
@@ -261,34 +288,11 @@ function konzilo_pages_panelizer_defaults() {
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 6;
-    $pane->locks = array();
-    $display->content['new-7'] = $pane;
-    $display->panels['content'][6] = 'new-7';
-    $pane = new stdClass();
-    $pane->pid = 'new-8';
-    $pane->panel = 'content';
-    $pane->type = 'node_links';
-    $pane->subtype = 'node_links';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
-      'build_mode' => 'full',
-      'identifier' => '',
-      'link' => 1,
-      'context' => 'panelizer',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
+      'style' => 'default',
     );
     $pane->css = array(
-      'css_class' => 'link-wrapper',
+      'css_id' => '',
+      'css_class' => 'author',
     );
     $pane->extras = array();
     $pane->position = 7;
@@ -323,7 +327,7 @@ function konzilo_pages_panelizer_defaults() {
     $display->content['new-9'] = $pane;
     $display->panels['sidebar'][0] = 'new-9';
   $display->hide_title = PANELS_TITLE_NONE;
-  $display->title_pane = 'new-8';
+  $display->title_pane = 'new-7';
   $panelizer->display = $display;
   $export['node:konzilo_page:default'] = $panelizer;
 

@@ -49,6 +49,7 @@ function konzilo_base_image_default_styles() {
         'weight' => 1,
       ),
     ),
+    'label' => 'promo',
   );
 
   return $styles;

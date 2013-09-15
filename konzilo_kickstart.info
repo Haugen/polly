@@ -21,7 +21,6 @@ dependencies[] = panels_ipe
 dependencies[] = ctools
 dependencies[] = libraries
 dependencies[] = oembed
-dependencies[] = media_oembed
 dependencies[] = oembedfield
 dependencies[] = strongarm
 dependencies[] = defaultconfig

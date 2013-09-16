@@ -56,21 +56,5 @@ function konzilo_kickstart_finish() {
 function konzilo_kickstart_wysiwyg_editor_settings_alter(&$settings, $context) {
   if ($context['profile']->editor == 'ckeditor') {
     $settings['allowedContent'] = TRUE;
-
-    // Use justify classes instead of inline css.
-    $settings['justifyClasses'] = array(
-      'align-left',
-      'align-center',
-      'align-right',
-      'align-justify',
-    );
-
-    // Use indent classes instead of inline css.
-    $settings['indentClasses'] = array(
-      'indent-1',
-      'indent-2',
-      'indent-3',
-      'indent-4',
-    );
   }
 }

@@ -155,5 +155,9 @@ libraries[oauth2-server-php][download][type] = get
 libraries[oauth2-server-php][download][url] = https://github.com/bshaffer/oauth2-server-php/archive/v0.8.tar.gz
 libraries[oauth2-server-php][destination] = libraries
 
+libraries[flexslider][download][type] = get
+libraries[flexslider][download][url] = https://github.com/woothemes/FlexSlider/archive/master.zip
+libraries[flexslider][destination] = libraries
+
 projects[shiny][type] = theme
 projects[shiny][version] = 1.3

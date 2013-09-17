@@ -114,6 +114,13 @@ function konzilo_promo_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 2,
       ),
+      'konsilo_slideshow' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
       'konzilo_promo' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -182,6 +189,16 @@ function konzilo_promo_field_default_field_instances() {
         'settings' => array(
           'image_link' => '',
           'image_style' => 'promo',
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
+      'konsilo_slideshow' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => 'slideshow',
         ),
         'type' => 'image',
         'weight' => 0,
@@ -271,6 +288,13 @@ function konzilo_promo_field_default_field_instances() {
         'type' => 'link_default',
         'weight' => 3,
       ),
+      'konsilo_slideshow' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 3,
+      ),
       'konzilo_promo' => array(
         'label' => 'hidden',
         'module' => 'link',
@@ -351,6 +375,13 @@ function konzilo_promo_field_default_field_instances() {
         'weight' => 0,
       ),
       'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'konsilo_slideshow' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),

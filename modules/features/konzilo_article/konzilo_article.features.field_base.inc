@@ -35,11 +35,15 @@ function konzilo_article_field_default_field_bases() {
     'settings' => array(
       'handler' => 'base',
       'handler_settings' => array(
+        'behaviors' => array(
+          'views-select-list' => array(
+            'status' => 0,
+          ),
+        ),
         'sort' => array(
           'type' => 'none',
         ),
         'target_bundles' => array(
-          'konzilo_author' => 'konzilo_author',
           'konzilo_image' => 'konzilo_image',
           'konzilo_media' => 'konzilo_media',
           'konzilo_text' => 'konzilo_text',

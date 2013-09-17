@@ -30,7 +30,7 @@ function konzilo_article_panelizer_defaults() {
   $panelizer->link_to_entity = TRUE;
   $panelizer->extra = array();
   $display = new panels_display();
-  $display->layout = 'brenham_flipped';
+  $display->layout = 'two-column-stacked';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -43,6 +43,7 @@ function konzilo_article_panelizer_defaults() {
       'header' => NULL,
       'sidebar' => NULL,
       'contentmain' => NULL,
+      'content' => NULL,
     ),
   );
   $display->cache = array();
@@ -51,39 +52,7 @@ function konzilo_article_panelizer_defaults() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-1';
-    $pane->panel = 'contentmain';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_konzilo_article_parts';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'label' => 'above',
-      'formatter' => 'entityreference_entity_view',
-      'delta_limit' => '0',
-      'delta_offset' => '0',
-      'delta_reversed' => 0,
-      'formatter_settings' => array(
-        'link' => FALSE,
-        'view_mode' => 'full',
-        'links' => 1,
-      ),
-      'context' => 'panelizer',
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['contentmain'][0] = 'new-1';
-    $pane = new stdClass();
-    $pane->pid = 'new-2';
-    $pane->panel = 'contentmain';
+    $pane->panel = 'content';
     $pane->type = 'container';
     $pane->subtype = 'air:node:field_konzilo_article_parts';
     $pane->shown = TRUE;
@@ -95,8 +64,9 @@ function konzilo_article_panelizer_defaults() {
       'context' => array(
         0 => 'panelizer',
       ),
-      'override_title' => 0,
+      'override_title' => 1,
       'override_title_text' => '',
+      'style' => 'default',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -104,10 +74,10 @@ function konzilo_article_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['contentmain'][1] = 'new-2';
+    $display->content['new-1'] = $pane;
+    $display->panels['content'][0] = 'new-1';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $panelizer->display = $display;

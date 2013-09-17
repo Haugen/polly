@@ -65,7 +65,7 @@ function konzilo_pages_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 4,
+      'weight' => 3,
     ),
   );
 
@@ -208,7 +208,7 @@ function konzilo_pages_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 6,
+      'weight' => 5,
     ),
   );
 
@@ -279,7 +279,7 @@ function konzilo_pages_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 5,
+      'weight' => 4,
     ),
   );
 
@@ -345,7 +345,59 @@ function konzilo_pages_field_default_field_instances() {
         ),
       ),
       'type' => 'inline_entity_form',
-      'weight' => 8,
+      'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance: 'node-konzilo_page-field_konzilo_slideshow'
+  $field_instances['node-konzilo_page-field_konzilo_slideshow'] = array(
+    'bundle' => 'konzilo_page',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 9,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_konzilo_slideshow',
+    'label' => 'Slideshow',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'inline_entity_form',
+      'settings' => array(
+        'fields' => array(),
+        'type_settings' => array(
+          'allow_existing' => 1,
+          'delete_references' => 0,
+          'match_operator' => 'CONTAINS',
+        ),
+      ),
+      'type' => 'inline_entity_form',
+      'weight' => 7,
     ),
   );
 
@@ -416,6 +468,7 @@ function konzilo_pages_field_default_field_instances() {
   t('Lead');
   t('Media');
   t('Promos');
+  t('Slideshow');
   t('Top headline');
 
   return $field_instances;

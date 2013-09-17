@@ -22,7 +22,7 @@ function konzilo_author_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'featured' => array(
         'label' => 'above',
@@ -35,7 +35,7 @@ function konzilo_author_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'konzilo_author' => array(
         'label' => 'hidden',
@@ -82,7 +82,7 @@ function konzilo_author_field_default_field_instances() {
         'module' => 'email',
         'settings' => array(),
         'type' => 'email_default',
-        'weight' => 2,
+        'weight' => 1,
       ),
       'featured' => array(
         'label' => 'above',
@@ -95,7 +95,7 @@ function konzilo_author_field_default_field_instances() {
         'module' => 'email',
         'settings' => array(),
         'type' => 'email_default',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'konzilo_author' => array(
         'label' => 'hidden',

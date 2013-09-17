@@ -26,11 +26,7 @@ function konzilo_base_ds_layout_settings_info() {
     'fields' => array(
       'file' => 'ds_content',
     ),
-    'classes' => array(
-      'layout_class' => array(
-        '' => '',
-      ),
-    ),
+    'classes' => array(),
     'wrappers' => array(
       'ds_content' => 'div',
     ),

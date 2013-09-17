@@ -64,6 +64,15 @@ function konzilo_author_strongarm() {
       'promo_yellow' => array(
         'custom_settings' => FALSE,
       ),
+      'konzilo_body_text' => array(
+        'custom_settings' => FALSE,
+      ),
+      'konzilo_facts_box' => array(
+        'custom_settings' => FALSE,
+      ),
+      'konzilo_slideshow' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(),

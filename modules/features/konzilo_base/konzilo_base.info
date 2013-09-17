@@ -36,6 +36,7 @@ features[field_base][] = field_konzilo_top_headline
 features[field_base][] = field_konzilo_user_ref
 features[filter][] = markdown
 features[filter][] = wysiwyg
+features[image][] = full-100-percent
 features[image][] = promo
 features[linkit_profiles][] = default
 features[user_permission][] = access content

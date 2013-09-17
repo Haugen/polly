@@ -58,6 +58,15 @@ function konzilo_text_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'konzilo_body_text' => array(
+        'custom_settings' => TRUE,
+      ),
+      'konzilo_facts_box' => array(
+        'custom_settings' => TRUE,
+      ),
+      'konzilo_slideshow' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(),

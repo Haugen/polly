@@ -79,38 +79,6 @@ function konzilo_pages_panelizer_defaults() {
     $pane->pid = 'new-2';
     $pane->panel = 'content';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_konzilo_top_headline';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'label' => 'hidden',
-      'formatter' => 'text_default',
-      'delta_limit' => 0,
-      'delta_offset' => '0',
-      'delta_reversed' => FALSE,
-      'formatter_settings' => array(),
-      'context' => 'panelizer',
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-      'style' => 'h2_title',
-    );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'headline divider',
-    );
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['content'][1] = 'new-2';
-    $pane = new stdClass();
-    $pane->pid = 'new-3';
-    $pane->panel = 'content';
-    $pane->type = 'entity_field';
     $pane->subtype = 'node:field_konzilo_media';
     $pane->shown = TRUE;
     $pane->access = array();
@@ -134,12 +102,12 @@ function konzilo_pages_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['content'][2] = 'new-3';
+    $display->content['new-2'] = $pane;
+    $display->panels['content'][1] = 'new-2';
     $pane = new stdClass();
-    $pane->pid = 'new-4';
+    $pane->pid = 'new-3';
     $pane->panel = 'content';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_konzilo_lead';
@@ -166,12 +134,12 @@ function konzilo_pages_panelizer_defaults() {
       'css_class' => 'leadtext',
     );
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['content'][3] = 'new-4';
+    $display->content['new-3'] = $pane;
+    $display->panels['content'][2] = 'new-3';
     $pane = new stdClass();
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-4';
     $pane->panel = 'content';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_konzilo_body';
@@ -198,12 +166,12 @@ function konzilo_pages_panelizer_defaults() {
       'css_class' => 'body',
     );
     $pane->extras = array();
-    $pane->position = 4;
+    $pane->position = 3;
     $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['content'][4] = 'new-5';
+    $display->content['new-4'] = $pane;
+    $display->panels['content'][3] = 'new-4';
     $pane = new stdClass();
-    $pane->pid = 'new-6';
+    $pane->pid = 'new-5';
     $pane->panel = 'content';
     $pane->type = 'node_links';
     $pane->subtype = 'node_links';
@@ -225,12 +193,12 @@ function konzilo_pages_panelizer_defaults() {
       'css_class' => 'link-wrapper',
     );
     $pane->extras = array();
-    $pane->position = 5;
+    $pane->position = 4;
     $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['content'][5] = 'new-6';
+    $display->content['new-5'] = $pane;
+    $display->panels['content'][4] = 'new-5';
     $pane = new stdClass();
-    $pane->pid = 'new-7';
+    $pane->pid = 'new-6';
     $pane->panel = 'sidebar';
     $pane->type = 'container';
     $pane->subtype = 'air:node:field_konzilo_promos';
@@ -255,10 +223,10 @@ function konzilo_pages_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-7'] = $pane;
-    $display->panels['sidebar'][0] = 'new-7';
-  $display->hide_title = PANELS_TITLE_NONE;
-  $display->title_pane = 'new-6';
+    $display->content['new-6'] = $pane;
+    $display->panels['sidebar'][0] = 'new-6';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = 'new-5';
   $panelizer->display = $display;
   $export['node:konzilo_page:default'] = $panelizer;
 

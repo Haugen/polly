@@ -42,6 +42,22 @@ function konzilo_text_field_default_field_instances() {
         'type' => 'entityreference_entity_view',
         'weight' => 4,
       ),
+      'konzilo_body_text' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 1,
+          'view_mode' => 'full',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 3,
+      ),
+      'konzilo_facts_box' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
       'konzilo_text' => array(
         'label' => 'hidden',
         'module' => 'entityreference',
@@ -112,6 +128,20 @@ function konzilo_text_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 3,
       ),
+      'konzilo_body_text' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+      'konzilo_facts_box' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
       'konzilo_text' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -171,6 +201,20 @@ function konzilo_text_field_default_field_instances() {
         'settings' => array(),
         'type' => 'text_default',
         'weight' => 2,
+      ),
+      'konzilo_body_text' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'konzilo_facts_box' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
       ),
       'konzilo_text' => array(
         'label' => 'hidden',
@@ -232,6 +276,20 @@ function konzilo_text_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 1,
       ),
+      'konzilo_body_text' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'konzilo_facts_box' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
       'konzilo_text' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -292,6 +350,18 @@ function konzilo_text_field_default_field_instances() {
         'settings' => array(),
         'type' => 'text_default',
         'weight' => 0,
+      ),
+      'konzilo_body_text' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+      'konzilo_facts_box' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
       ),
       'konzilo_text' => array(
         'label' => 'hidden',

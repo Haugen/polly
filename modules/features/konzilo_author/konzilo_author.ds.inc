@@ -21,6 +21,59 @@ function konzilo_author_ds_field_settings_info() {
       'weight' => '1',
       'label' => 'hidden',
       'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '0',
+        'wrapper' => 'h2',
+        'class' => '',
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'headline',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_konzilo_body' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'bio',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_konzilo_email' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'email',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_konzilo_image' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'image',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
     ),
   );
   $export['node|konzilo_author|full'] = $ds_fieldsetting;
@@ -63,21 +116,17 @@ function konzilo_author_ds_layout_settings_info() {
       ),
       'content' => array(
         1 => 'title',
-        2 => 'field_konzilo_body',
-        3 => 'field_konzilo_email',
+        2 => 'field_konzilo_email',
+        3 => 'field_konzilo_body',
       ),
     ),
     'fields' => array(
       'field_konzilo_image' => 'sidebar',
       'title' => 'content',
-      'field_konzilo_body' => 'content',
       'field_konzilo_email' => 'content',
+      'field_konzilo_body' => 'content',
     ),
-    'classes' => array(
-      'layout_class' => array(
-        '' => '',
-      ),
-    ),
+    'classes' => array(),
     'wrappers' => array(
       'sidebar' => 'div',
       'content' => 'div',
@@ -110,11 +159,7 @@ function konzilo_author_ds_layout_settings_info() {
       'title' => 'ds_content',
       'field_konzilo_email' => 'ds_content',
     ),
-    'classes' => array(
-      'layout_class' => array(
-        '' => '',
-      ),
-    ),
+    'classes' => array(),
     'wrappers' => array(
       'ds_content' => 'div',
     ),

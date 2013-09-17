@@ -114,14 +114,14 @@ function konzilo_promo_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 2,
       ),
-      'konzilo_slideshow' => array(
+      'konzilo_promo' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
         'weight' => 2,
       ),
-      'konzilo_promo' => array(
+      'konzilo_slideshow' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
@@ -193,22 +193,22 @@ function konzilo_promo_field_default_field_instances() {
         'type' => 'image',
         'weight' => 0,
       ),
-      'konzilo_slideshow' => array(
-        'label' => 'hidden',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => 'slideshow',
-        ),
-        'type' => 'image',
-        'weight' => 0,
-      ),
       'konzilo_promo' => array(
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
           'image_style' => 'medium',
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
+      'konzilo_slideshow' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => 'slideshow',
         ),
         'type' => 'image',
         'weight' => 0,
@@ -288,14 +288,14 @@ function konzilo_promo_field_default_field_instances() {
         'type' => 'link_default',
         'weight' => 3,
       ),
-      'konzilo_slideshow' => array(
+      'konzilo_promo' => array(
         'label' => 'hidden',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
         'weight' => 3,
       ),
-      'konzilo_promo' => array(
+      'konzilo_slideshow' => array(
         'label' => 'hidden',
         'module' => 'link',
         'settings' => array(),
@@ -381,14 +381,14 @@ function konzilo_promo_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 1,
       ),
-      'konzilo_slideshow' => array(
+      'konzilo_promo' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
         'weight' => 1,
       ),
-      'konzilo_promo' => array(
+      'konzilo_slideshow' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),

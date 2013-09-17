@@ -37,8 +37,8 @@ function konzilo_promo_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 1260,
-          'height' => 540,
+          'width' => 1600,
+          'height' => 430,
         ),
         'weight' => 1,
       ),

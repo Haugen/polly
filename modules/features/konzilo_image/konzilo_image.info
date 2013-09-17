@@ -6,6 +6,7 @@ dependencies[] = defaultconfig
 dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = file_entity
+dependencies[] = inline_entity_form
 dependencies[] = konzilo_base
 dependencies[] = strongarm
 dependencies[] = text

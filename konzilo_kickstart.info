@@ -15,6 +15,7 @@ dependencies[] = contextual
 dependencies[] = oauth2_server
 dependencies[] = konzilo
 dependencies[] = panels
+dependencies[] = panels_everywhere
 dependencies[] = panopoly_theme
 dependencies[] = panelizer
 dependencies[] = panels_ipe

@@ -465,7 +465,7 @@ function konzilo_pages_field_default_field_instances() {
       'settings' => array(
         'fields' => array(),
         'type_settings' => array(
-          'allow_existing' => 0,
+          'allow_existing' => 1,
           'delete_references' => 0,
           'match_operator' => 'CONTAINS',
         ),

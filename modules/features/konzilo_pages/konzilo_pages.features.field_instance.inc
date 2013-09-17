@@ -145,7 +145,7 @@ function konzilo_pages_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'oembedfield',
+        'module' => 'oembed',
         'settings' => array(
           'maxheight' => '',
           'maxwidth' => '',
@@ -155,7 +155,7 @@ function konzilo_pages_field_default_field_instances() {
       ),
       'konzilo_page' => array(
         'label' => 'hidden',
-        'module' => 'oembedfield',
+        'module' => 'oembed',
         'settings' => array(
           'maxheight' => '',
           'maxwidth' => '',
@@ -165,7 +165,7 @@ function konzilo_pages_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'hidden',
-        'module' => 'oembedfield',
+        'module' => 'oembed',
         'settings' => array(
           'maxheight' => '',
           'maxwidth' => '',
@@ -262,18 +262,19 @@ function konzilo_pages_field_default_field_instances() {
       'module' => 'media',
       'settings' => array(
         'allowed_schemes' => array(
+          'oembed' => 'oembed',
           'public' => 'public',
         ),
         'allowed_types' => array(
-          'audio' => 0,
+          'audio' => 'audio',
           'document' => 0,
           'image' => 'image',
-          'video' => 0,
+          'video' => 'video',
         ),
         'browser_plugins' => array(
           'media_default--media_browser_1' => 'media_default--media_browser_1',
           'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
-          'media_internet' => 0,
+          'media_internet' => 'media_internet',
           'upload' => 'upload',
         ),
         'progress_indicator' => 'throbber',

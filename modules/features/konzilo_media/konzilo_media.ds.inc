@@ -5,6 +5,51 @@
  */
 
 /**
+ * Implements hook_ds_field_settings_info().
+ */
+function konzilo_media_ds_field_settings_info() {
+  $export = array();
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|konzilo_media|full';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'konzilo_media';
+  $ds_fieldsetting->view_mode = 'full';
+  $ds_fieldsetting->settings = array(
+    'field_konzilo_body' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'body',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_konzilo_media' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'media',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+  );
+  $export['node|konzilo_media|full'] = $ds_fieldsetting;
+
+  return $export;
+}
+
+/**
  * Implements hook_ds_layout_settings_info().
  */
 function konzilo_media_ds_layout_settings_info() {
@@ -21,14 +66,14 @@ function konzilo_media_ds_layout_settings_info() {
     'regions' => array(
       'ds_content' => array(
         0 => 'field_konzilo_media',
-        1 => 'field_konzilo_author',
-        2 => 'field_konzilo_body',
+        1 => 'field_konzilo_body',
+        2 => 'field_konzilo_author',
       ),
     ),
     'fields' => array(
       'field_konzilo_media' => 'ds_content',
-      'field_konzilo_author' => 'ds_content',
       'field_konzilo_body' => 'ds_content',
+      'field_konzilo_author' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(

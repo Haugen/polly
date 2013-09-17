@@ -32,6 +32,7 @@ function konzilo_article_entity_mappers() {
     ->addMapping(new PropertyMapper('content.lead', 'field_konzilo_lead'))
     ->addMapping(new PropertyMapper('content.kicker', 'field_konzilo_kicker'))
     ->addMapping(new EntityPropertyMapper('byline', 'field_konzilo_author', $authorMapper));
+
   $mediaMapper = new PropertyMapper('content.media', 'field_konzilo_media');
   $mediaMapper->addFormatter(function ($value) {
     return array('url' => $value);

@@ -110,7 +110,7 @@ function konzilo_media_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 1,
       ),
       'konzilo_media' => array(
         'label' => 'hidden',
@@ -155,10 +155,10 @@ function konzilo_media_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'oembedfield',
+        'module' => 'oembed',
         'settings' => array(
-          'maxheight' => '',
-          'maxwidth' => '',
+          'maxheight' => 450,
+          'maxwidth' => 705,
         ),
         'type' => 'oembed_default',
         'weight' => 1,
@@ -171,17 +171,17 @@ function konzilo_media_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'oembedfield',
+        'module' => 'oembed',
         'settings' => array(
-          'maxheight' => '',
-          'maxwidth' => '',
+          'maxheight' => 450,
+          'maxwidth' => 705,
         ),
         'type' => 'oembed_default',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'konzilo_media' => array(
         'label' => 'hidden',
-        'module' => 'oembedfield',
+        'module' => 'oembed',
         'settings' => array(
           'maxheight' => '',
           'maxwidth' => '',
@@ -191,7 +191,7 @@ function konzilo_media_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'hidden',
-        'module' => 'oembedfield',
+        'module' => 'oembed',
         'settings' => array(
           'maxheight' => '',
           'maxwidth' => '',

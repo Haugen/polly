@@ -80,10 +80,10 @@ function konzilo_promo_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
-  $ds_fieldsetting->id = 'node|konzilo_promo|konsilo_slideshow';
+  $ds_fieldsetting->id = 'node|konzilo_promo|konzilo_slideshow';
   $ds_fieldsetting->entity_type = 'node';
   $ds_fieldsetting->bundle = 'konzilo_promo';
-  $ds_fieldsetting->view_mode = 'konsilo_slideshow';
+  $ds_fieldsetting->view_mode = 'konzilo_slideshow';
   $ds_fieldsetting->settings = array(
     'field_konzilo_lead' => array(
       'formatter_settings' => array(
@@ -144,7 +144,7 @@ function konzilo_promo_ds_field_settings_info() {
       ),
     ),
   );
-  $export['node|konzilo_promo|konsilo_slideshow'] = $ds_fieldsetting;
+  $export['node|konzilo_promo|konzilo_slideshow'] = $ds_fieldsetting;
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
@@ -214,10 +214,10 @@ function konzilo_promo_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
-  $ds_layout->id = 'node|konzilo_promo|konsilo_slideshow';
+  $ds_layout->id = 'node|konzilo_promo|konzilo_slideshow';
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'konzilo_promo';
-  $ds_layout->view_mode = 'konsilo_slideshow';
+  $ds_layout->view_mode = 'konzilo_slideshow';
   $ds_layout->layout = 'panels-one-column-stacked';
   $ds_layout->settings = array(
     'regions' => array(
@@ -248,7 +248,7 @@ function konzilo_promo_ds_layout_settings_info() {
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
   );
-  $export['node|konzilo_promo|konsilo_slideshow'] = $ds_layout;
+  $export['node|konzilo_promo|konzilo_slideshow'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
@@ -293,12 +293,12 @@ function konzilo_promo_ds_view_modes_info() {
 
   $ds_view_mode = new stdClass();
   $ds_view_mode->api_version = 1;
-  $ds_view_mode->view_mode = 'konsilo_slideshow';
+  $ds_view_mode->view_mode = 'konzilo_slideshow';
   $ds_view_mode->label = 'slideshow';
   $ds_view_mode->entities = array(
     'node' => 'node',
   );
-  $export['konsilo_slideshow'] = $ds_view_mode;
+  $export['konzilo_slideshow'] = $ds_view_mode;
 
   return $export;
 }

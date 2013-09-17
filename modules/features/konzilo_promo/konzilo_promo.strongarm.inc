@@ -92,7 +92,7 @@ function konzilo_promo_strongarm() {
       'promo_yellow' => array(
         'custom_settings' => TRUE,
       ),
-      'konsilo_slideshow' => array(
+      'konzilo_slideshow' => array(
         'custom_settings' => TRUE,
       ),
     ),

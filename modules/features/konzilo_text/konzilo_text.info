@@ -5,6 +5,7 @@ dependencies[] = ctools
 dependencies[] = defaultconfig
 dependencies[] = entityreference
 dependencies[] = features
+dependencies[] = inline_entity_form
 dependencies[] = konzilo_base
 dependencies[] = strongarm
 dependencies[] = text

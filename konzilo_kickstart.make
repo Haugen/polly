@@ -1,5 +1,5 @@
 api = 2
-core = 7.15
+core = 7.23
 
 projects[air][type] = module
 projects[air][download][type] = git
@@ -78,6 +78,9 @@ projects[linkit][subdir] = contrib
 projects[markdown][version] = 1.2
 projects[markdown][subdir] = contrib
 
+projects[media][version] = 2.0-alpha2
+projects[media][subdir] = contrib
+
 projects[metatag][version] = 1.0-beta7
 projects[metatag][subdir] = contrib
 
@@ -132,9 +135,14 @@ projects[transliteration][subdir] = contrib
 projects[variable][version] = 2.2
 projects[variable][subdir] = contrib
 
+projects[views][version] = 3.7
+projects[views][subdir] = contrib
+
 projects[wysiwyg][type] = module
 projects[wysiwyg][version] = 2.2
 projects[wysiwyg][subdir] = contrib
+projects[wysiwyg][download][type] = git
+projects[wysiwyg][download][revision] = ee64524
 
 projects[xmlsitemap][version] = 2.0-rc2
 projects[xmlsitemap][subdir] = contrib
@@ -147,8 +155,9 @@ libraries[oauth2-server-php][download][type] = get
 libraries[oauth2-server-php][download][url] = https://github.com/bshaffer/oauth2-server-php/archive/v0.8.tar.gz
 libraries[oauth2-server-php][destination] = libraries
 
-projects[adaptivetheme][type] = theme
-projects[adaptivetheme][version] = 3.1
+libraries[flexslider][download][type] = get
+libraries[flexslider][download][url] = https://github.com/woothemes/FlexSlider/archive/master.zip
+libraries[flexslider][destination] = libraries
 
-projects[at_panels_everywhere][type] = theme
-projects[at_panels_everywhere][version] = 3.0-rc1
+projects[shiny][type] = theme
+projects[shiny][version] = 1.3

@@ -48,3 +48,13 @@ function konzilo_kickstart_finish() {
   variable_del('defaultconfig_site_install');
   return array();
 }
+
+
+/**
+ * Implements hook_wysiwyg_editor_settings_alter().
+ */
+function konzilo_kickstart_wysiwyg_editor_settings_alter(&$settings, $context) {
+  if ($context['profile']->editor == 'ckeditor') {
+    $settings['allowedContent'] = TRUE;
+  }
+}

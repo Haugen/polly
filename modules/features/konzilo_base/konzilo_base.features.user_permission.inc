@@ -15,6 +15,7 @@ function konzilo_base_user_default_permissions() {
     'name' => 'access content',
     'roles' => array(
       'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
   );

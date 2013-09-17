@@ -84,25 +84,25 @@ function konzilo_article_panelizer_defaults() {
     $pane = new stdClass();
     $pane->pid = 'new-2';
     $pane->panel = 'contentmain';
-    $pane->type = 'node_links';
-    $pane->subtype = 'node_links';
+    $pane->type = 'container';
+    $pane->subtype = 'air:node:field_konzilo_article_parts';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => FALSE,
+      'placement' => '5232f3a87fc06',
+      'field_name' => 'field_konzilo_article_parts',
+      'entity_type' => 'node',
+      'context' => array(
+        0 => 'panelizer',
+      ),
+      'override_title' => 0,
       'override_title_text' => '',
-      'build_mode' => 'page_manager',
-      'identifier' => '',
-      'link' => TRUE,
-      'context' => 'panelizer',
     );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array(
-      'css_class' => 'link-wrapper',
-    );
+    $pane->css = array();
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();

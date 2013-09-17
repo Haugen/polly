@@ -14,7 +14,7 @@ function konzilo_promo_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_konzilo_promo';
-  $strongarm->value = 'edit-panelizer';
+  $strongarm->value = 'edit-display';
   $export['additional_settings__active_tab_konzilo_promo'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -89,6 +89,12 @@ function konzilo_promo_strongarm() {
       'konzilo_text' => array(
         'custom_settings' => FALSE,
       ),
+      'promo_yellow' => array(
+        'custom_settings' => TRUE,
+      ),
+      'konzilo_slideshow' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -144,7 +150,7 @@ function konzilo_promo_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_submitted_konzilo_promo';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['node_submitted_konzilo_promo'] = $strongarm;
 
   $strongarm = new stdClass();

@@ -73,7 +73,9 @@ function konzilo_article_entity_mappers() {
 
   $part_mapper = new ConditionalEntityMapper($part_mappers, function ($mappers, $from_entity) {
     $type = $from_entity->get('type')->value();
-    return (isset($mappers[$type])) ? $mappers[$type] : NULL;
+    // We don't want to save parts that don't have content yet.
+    $content = $from_entity->get('content')->value();
+    return (!empty($content) && isset($mappers[$type])) ? $mappers[$type] : NULL;
   });
 
   $mapper->addMapping(new EntityListPropertyMapper('parts', 'field_konzilo_article_parts', $part_mapper));

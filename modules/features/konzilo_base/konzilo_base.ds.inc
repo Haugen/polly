@@ -54,14 +54,7 @@ function konzilo_base_ds_layout_settings_info() {
     'fields' => array(
       'file' => 'ds_content',
     ),
-    'classes' => array(
-      'layout_class' => array(
-        'pull-right' => 'pull-right',
-      ),
-      'ds_content' => array(
-        'pull-right' => 'pull-right',
-      ),
-    ),
+    'classes' => array(),
     'wrappers' => array(
       'ds_content' => 'div',
     ),

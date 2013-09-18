@@ -31,9 +31,13 @@ function konzilo_image_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 2,
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 0,
+          'view_mode' => 'full',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 3,
       ),
       'konzilo_image' => array(
         'label' => 'hidden',
@@ -45,7 +49,7 @@ function konzilo_image_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 2,
+        'weight' => 11,
       ),
     ),
     'entity_type' => 'node',
@@ -66,7 +70,7 @@ function konzilo_image_field_default_field_instances() {
         'type_settings' => array(),
       ),
       'type' => 'inline_entity_form',
-      'weight' => 2,
+      'weight' => 6,
     ),
   );
 
@@ -95,7 +99,7 @@ function konzilo_image_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'konzilo_image' => array(
         'label' => 'hidden',
@@ -109,7 +113,7 @@ function konzilo_image_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'node',
@@ -127,7 +131,60 @@ function konzilo_image_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 0,
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'node-konzilo_image-field_konzilo_headline'
+  $field_instances['node-konzilo_image-field_konzilo_headline'] = array(
+    'bundle' => 'konzilo_image',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 5,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_konzilo_headline',
+    'label' => 'Headline',
+    'required' => 0,
+    'settings' => array(
+      'linkit' => array(
+        'enable' => 0,
+        'insert_plugin' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 2,
     ),
   );
 
@@ -182,7 +239,7 @@ function konzilo_image_field_default_field_instances() {
           'view_mode' => 'teaser',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 0,
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'node',
@@ -201,7 +258,57 @@ function konzilo_image_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => -2,
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'node-konzilo_image-field_konzilo_teaser'
+  $field_instances['node-konzilo_image-field_konzilo_teaser'] = array(
+    'bundle' => 'konzilo_image',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Show this article part in article listings.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 3,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_konzilo_teaser',
+    'label' => 'Show in listings',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 3,
     ),
   );
 
@@ -209,7 +316,10 @@ function konzilo_image_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Author');
   t('Description');
+  t('Headline');
   t('Images');
+  t('Show in listings');
+  t('Show this article part in article listings.');
 
   return $field_instances;
 }

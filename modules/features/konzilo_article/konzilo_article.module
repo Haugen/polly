@@ -6,10 +6,19 @@
 
 include_once 'konzilo_article.features.inc';
 
+/**
+ *
+ * @return EntityMapper[]
+ */
 function konzilo_article_entity_mappers() {
+  $statusMapper = new PropertyMapper('published', 'status');
+  $statusMapper->addFormatter(function ($value) {
+      return $value ? 1 : 0;
+  });
   $mapper = entity_mapper('article', 'konzilo_article', 'node')
     ->setDefaults(array('type' => 'konzilo_article'))
-    ->addMapping(new PropertyMapper('title', 'title'));
+    ->addMapping(new PropertyMapper('title', 'title'))
+    ->addMapping($statusMapper);
 
   $authorMapper = entity_mapper('author', 'konzilo_author', 'node')
     ->setDefaults(array('type' => 'konzilo_author'))
@@ -23,15 +32,23 @@ function konzilo_article_entity_mappers() {
   $body_mapper->addFormatter(function ($value){
     return array('value' => $value, 'format' => 'markdown');
   });
-
+  // Set the correct status on article parts.
+  $publishedFormatter = function($fromEntity, $toEntity) {
+    $article = $fromEntity->get("article");
+    $status = $article->get('published')->value();
+    $toEntity->get('status')->set($status ? 1 : 0);
+  };
   $part_mappers['text'] = entity_mapper('text', 'konzilo_articlepart', 'node')
     ->setDefaults(array('type' => 'konzilo_text'))
+    ->addMapping(new PropertyMapper('title', 'title'))
+    ->addMapping(new PropertyMapper('teaser', 'field_konzilo_teaser'))
     ->addMapping(new PropertyMapper('content.topheadline', 'field_konzilo_top_headline'))
-    ->addMapping(new PropertyMapper('content.headline', 'title'))
+    ->addMapping(new PropertyMapper('content.headline', 'field_konzilo_headline'))
     ->addMapping($body_mapper)
     ->addMapping(new PropertyMapper('content.lead', 'field_konzilo_lead'))
     ->addMapping(new PropertyMapper('content.kicker', 'field_konzilo_kicker'))
-    ->addMapping(new EntityPropertyMapper('byline', 'field_konzilo_author', $authorMapper));
+    ->addMapping(new EntityPropertyMapper('byline', 'field_konzilo_author', $authorMapper))
+    ->addFormatter($publishedFormatter);
 
   $mediaMapper = new PropertyMapper('content.media', 'field_konzilo_media');
   $mediaMapper->addFormatter(function ($value) {
@@ -40,21 +57,29 @@ function konzilo_article_entity_mappers() {
 
   $part_mappers['media'] = entity_mapper('media', 'konzilo_articlepart', 'node')
     ->setDefaults(array('type' => 'konzilo_media'))
-    ->addMapping(new PropertyMapper('content.title', 'title'))
+    ->addMapping(new PropertyMapper('title', 'title'))
+    ->addMapping(new PropertyMapper('teaser', 'field_konzilo_teaser'))
+    ->addMapping(new PropertyMapper('content.title', 'field_konzilo_headline'))
     ->addMapping(new PropertyMapper('content.description', 'field_konzilo_body'))
     ->addMapping($mediaMapper)
-    ->addMapping(new EntityPropertyMapper('byline', 'field_konzilo_author', $authorMapper));
+    ->addMapping(new EntityPropertyMapper('byline', 'field_konzilo_author', $authorMapper))
+    ->addFormatter($publishedFormatter);
 
   $part_mappers['image'] = entity_mapper('image', 'konzilo_articlepart', 'node')
     ->setDefaults(array('type' => 'konzilo_image'))
-    ->addMapping(new PropertyMapper('content.headline', 'title'))
+    ->addMapping(new PropertyMapper('title', 'title'))
+    ->addMapping(new PropertyMapper('teaser', 'field_konzilo_teaser'))
+    ->addMapping(new PropertyMapper('content.headline', 'field_konzilo_headline'))
     ->addMapping(new PropertyMapper('content.description', 'field_konzilo_body'))
     ->addMapping(new EntityPropertyMapper('byline', 'field_konzilo_author', $authorMapper))
-    ->addMapping(new FileListPropertyMapper('content.images', 'field_konzilo_image'));
+    ->addMapping(new FileListPropertyMapper('content.images', 'field_konzilo_image'))
+    ->addFormatter($publishedFormatter);
 
   $part_mapper = new ConditionalEntityMapper($part_mappers, function ($mappers, $from_entity) {
     $type = $from_entity->get('type')->value();
-    return (isset($mappers[$type])) ? $mappers[$type] : NULL;
+    // We don't want to save parts that don't have content yet.
+    $content = $from_entity->get('content')->value();
+    return (!empty($content) && isset($mappers[$type])) ? $mappers[$type] : NULL;
   });
 
   $mapper->addMapping(new EntityListPropertyMapper('parts', 'field_konzilo_article_parts', $part_mapper));

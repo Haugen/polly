@@ -10,6 +10,10 @@ dependencies[] = menu
 dependencies[] = taxonomy
 dependencies[] = toolbar
 dependencies[] = contextual
+dependencies[] = number
+dependencies[] = list
+dependencies[] = options
+
 
 ; Contrib
 dependencies[] = oauth2_server
@@ -35,6 +39,7 @@ dependencies[] = media
 dependencies[] = media_internet
 dependencies[] = media_wysiwyg_view_mode
 dependencies[] = views
+dependencies[] = views_content
 dependencies[] = menu_block
 
 

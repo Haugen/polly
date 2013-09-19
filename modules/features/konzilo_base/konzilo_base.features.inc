@@ -91,7 +91,7 @@ function konzilo_base_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale',
         'data' => array(
-          'width' => 320,
+          'width' => 200,
           'height' => '',
           'upscale' => 0,
         ),

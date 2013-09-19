@@ -42,7 +42,7 @@ function konzilo_pages_panelizer_defaults() {
     ),
   );
   $display->cache = array();
-  $display->title = '%node:title';
+  $display->title = '%node:field_konzilo_top_headline';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();

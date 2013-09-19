@@ -33,10 +33,11 @@ function konzilo_article_views_default_views() {
   $handler->display->display_options['row_options']['relationship'] = 'field_konzilo_article_parts_target_id';
   $handler->display->display_options['row_options']['alternating'] = 0;
   $handler->display->display_options['row_options']['grouping'] = 0;
-  $handler->display->display_options['row_options']['advanced'] = 0;
+  $handler->display->display_options['row_options']['advanced'] = 1;
   $handler->display->display_options['row_options']['delta_fieldset']['delta_fields'] = array();
   $handler->display->display_options['row_options']['grouping_fieldset']['group_field'] = 'node|created';
   $handler->display->display_options['row_options']['default_fieldset']['view_mode'] = 'teaser';
+  $handler->display->display_options['row_options']['advanced_fieldset']['advanced'] = TRUE;
   /* Relationship: Entity Reference: Referenced Entity */
   $handler->display->display_options['relationships']['field_konzilo_article_parts_target_id']['id'] = 'field_konzilo_article_parts_target_id';
   $handler->display->display_options['relationships']['field_konzilo_article_parts_target_id']['table'] = 'field_data_field_konzilo_article_parts';

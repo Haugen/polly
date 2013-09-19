@@ -86,3 +86,34 @@ function konzilo_article_entity_mappers() {
 
   return array('konzilo_article' => $mapper, 'konzilo_file' => new FileEntityMapper('file'));
 }
+
+
+/**
+ *
+ * A BIG BIG NO NO!! DO HELLA-NOT DO THIS AT HOME KIDS!
+ *
+ * @param $entity
+ * @param $view_mode
+ * @param $load_comments
+ * @return string
+ */
+function ds_views_row_adv_konzilo_article($entity, $view_mode, $load_comments) {
+  $result = db_select('field_data_field_konzilo_article_parts', 'a')
+    ->fields('a', array('entity_id', 'field_konzilo_article_parts_target_id'))
+    ->condition('bundle', 'konzilo_article')
+    ->condition('entity_type', 'node')
+    ->condition('field_konzilo_article_parts_target_id', $entity->nid)
+    ->execute()
+    ->fetch();
+
+  $entity_view = entity_view('node', array($entity), $view_mode);
+  if (!empty($result)) {
+    $target_ref_id = $result->entity_id;
+    $render = current($entity_view['node']);
+    $entity_view['node'][$entity->nid]['field_konzilo_headline'] = array(
+      '#markup' => '<div class="headline"><h2 class="title">' . l($render['field_konzilo_headline']['#items'][0]['value'], 'node/' . $target_ref_id) . '</h2></div>',
+    );
+  }
+
+  return drupal_render($entity_view);
+}

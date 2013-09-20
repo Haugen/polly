@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Konzilo Author feature.
- */
-
-include_once 'konzilo_author.features.inc';

@@ -1,6 +1,9 @@
 api = 2
 core = 7.23
 
+projects[advancedqueue][version] = 1.0-alpha2
+projects[advancedqueue][subdir] = contrib
+
 projects[air][type] = module
 projects[air][download][type] = git
 projects[air][download][url] = git@github.com:konzilo/air.git
@@ -66,6 +69,12 @@ projects[konzilo][download][type] = git
 projects[konzilo][download][url] = git@github.com:konzilo/drupal-konzilo.git
 projects[konzilo][subdir] = contrib
 
+projects[konzilo_features][type] = module
+projects[konzilo_features][download][type] = git
+projects[konzilo_features][download][branch] = master
+projects[konzilo_features][download][url] = git@github.com:konzilo/konzilo_features.git
+projects[konzilo_features][subdir] = contrib
+
 projects[libraries][version] = 2.1
 projects[libraries][subdir] = contrib
 
@@ -83,6 +92,7 @@ projects[media][subdir] = contrib
 
 projects[metatag][version] = 1.0-beta7
 projects[metatag][subdir] = contrib
+
 
 ; Use latest version for bug fixes.
 projects[oauth2_server][type] = module

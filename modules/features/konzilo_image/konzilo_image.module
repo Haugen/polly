@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Konzilo Image feature.
- */
-
-include_once 'konzilo_image.features.inc';

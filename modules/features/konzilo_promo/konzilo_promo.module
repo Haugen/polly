@@ -1,8 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Konzilo promo feature.
- */
-
-include_once 'konzilo_promo.features.inc';
-

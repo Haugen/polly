@@ -9,10 +9,10 @@
  */
 function konzilo_kickstart_install() {
   // We use seven as our admin theme.
-  theme_enable(array('shiny', 'iannis'));
+  theme_enable(array('shiny'));
   $variables = array(
     'admin_theme' => 'shiny',
-    'theme_default' => 'iannis',
+    'theme_default' => 'bartik',
     'node_admin_theme' => 1,
   );
   foreach ($variables as $key => $variable) {

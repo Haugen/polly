@@ -40,8 +40,6 @@ dependencies[] = media_internet
 dependencies[] = media_wysiwyg_view_mode
 dependencies[] = views
 dependencies[] = views_content
-dependencies[] = menu_block
-
 
 
 ; Features

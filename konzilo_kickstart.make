@@ -69,6 +69,12 @@ projects[konzilo_features][download][branch] = master
 projects[konzilo_features][download][url] = git@github.com:konzilo/konzilo_features.git
 projects[konzilo_features][subdir] = contrib
 
+projects[backref_field][type] = module
+projects[backref_field][download][type] = git
+projects[backref_field][download][branch] = master
+projects[backref_field][download][url] = git@github.com:konzilo/backref_field.git
+projects[backref_field][subdir] = contrib
+
 projects[libraries][version] = 2.1
 projects[libraries][subdir] = contrib
 

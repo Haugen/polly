@@ -33,9 +33,7 @@ projects[entity][version] = 1.2
 projects[entity][subdir] = contrib
 projects[entity][patch][1780646] = https://drupal.org/files/1780646-202-entity-node-access_0.patch
 
-projects[entity_mapper][type] = module
-projects[entity_mapper][download][type] = git
-projects[entity_mapper][download][url] = git@github.com:konzilo/drupal-entity_mapper.git
+projects[entity_mapper][version] = 1.x-dev
 projects[entity_mapper][subdir] = contrib
 
 projects[entity_translation][version] = 1.0-beta3

@@ -60,9 +60,7 @@ projects[i18n][subdir] = contrib
 projects[inline_entity_form][version] = 1.3
 projects[inline_entity_form][subdir] = contrib
 
-projects[konzilo][type] = module
-projects[konzilo][download][type] = git
-projects[konzilo][download][url] = git@github.com:konzilo/drupal-konzilo.git
+projects[konzilo][version] = 1.x-dev
 projects[konzilo][subdir] = contrib
 
 projects[konzilo_features][type] = module

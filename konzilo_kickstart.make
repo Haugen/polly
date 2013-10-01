@@ -4,9 +4,7 @@ core = 7.23
 projects[advancedqueue][version] = 1.0-alpha2
 projects[advancedqueue][subdir] = contrib
 
-projects[air][type] = module
-projects[air][download][type] = git
-projects[air][download][url] = git@github.com:konzilo/air.git
+projects[air][version] = 1.x-dev
 projects[air][subdir] = contrib
 
 projects[coder][version] = 2.0-beta2

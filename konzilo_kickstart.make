@@ -101,8 +101,11 @@ projects[oauth2_server][download][revision] = 879a63a
 projects[oauth2_server][subdir] = contrib
 projects[oauth2_server][patch][2079279] = https://drupal.org/files/2079279.oauth2_server.entity_ui_issue.patch
 
-projects[oembed][version] = 1.0-rc2
+;projects[oembed][version] = 1.0-rc2
 projects[oembed][subdir] = contrib
+projects[oembed][type] = module
+projects[oembed][download][type] = git
+projects[oembed][download][revision] = 63898e1
 
 projects[panels][version] = 3.3
 projects[panels][subdir] = contrib

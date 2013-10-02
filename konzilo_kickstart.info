@@ -53,3 +53,4 @@ dependencies[] = konzilo_media
 dependencies[] = konzilo_promo
 dependencies[] = konzilo_pages
 dependencies[] = konzilo_seo
+dependencies[] = konzilo_image_styles

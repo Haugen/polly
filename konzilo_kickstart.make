@@ -74,7 +74,7 @@ projects[konzilo][subdir] = contrib
 
 projects[konzilo_features][type] = module
 projects[konzilo_features][download][type] = git
-projects[konzilo_features][download][branch] = master
+projects[konzilo_features][download][branch] = 7.x-1.x
 projects[konzilo_features][download][url] = git@github.com:konzilo/konzilo_features.git
 projects[konzilo_features][subdir] = contrib
 

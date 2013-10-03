@@ -4,7 +4,10 @@ core = 7.23
 projects[advancedqueue][version] = 1.0-alpha2
 projects[advancedqueue][subdir] = contrib
 
-projects[air][version] = 1.x-dev
+projects[air][type] = module
+projects[air][download][type] = git
+projects[air][download][branch] = 7.x-1.x
+projects[air][download][url] = git@github.com:konzilo/air.git
 projects[air][subdir] = contrib
 
 projects[coder][version] = 2.0-beta2
@@ -33,7 +36,10 @@ projects[entity][version] = 1.2
 projects[entity][subdir] = contrib
 projects[entity][patch][1780646] = https://drupal.org/files/1780646-202-entity-node-access_0.patch
 
-projects[entity_mapper][version] = 1.x-dev
+projects[entity_mapper][type] = module
+projects[entity_mapper][download][type] = git
+projects[entity_mapper][download][branch] = 7.x-1.x
+projects[entity_mapper][download][url] = git@github.com:konzilo/drupal-entity_mapper.git
 projects[entity_mapper][subdir] = contrib
 
 projects[entity_translation][version] = 1.0-beta3
@@ -60,7 +66,10 @@ projects[i18n][subdir] = contrib
 projects[inline_entity_form][version] = 1.3
 projects[inline_entity_form][subdir] = contrib
 
-projects[konzilo][version] = 1.x-dev
+projects[konzilo][type] = module
+projects[konzilo][download][type] = git
+projects[konzilo][download][branch] = 7.x-1.x
+projects[konzilo][download][url] = git@github.com:konzilo/drupal-konzilo.git
 projects[konzilo][subdir] = contrib
 
 projects[konzilo_features][type] = module

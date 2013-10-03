@@ -46,9 +46,10 @@ function konzilo_kickstart_finish() {
   }
   // Remove the variable as it's no longer necessary.
   variable_del('defaultconfig_site_install');
+
+
   return array();
 }
-
 
 /**
  * Implements hook_wysiwyg_editor_settings_alter().

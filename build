@@ -1,1 +1,1 @@
-drush make --no-core --contrib-destination=. --no-gitinfofile --working-copy --strict=0 konzilo_kickstart.make -y
+drush make --no-cache --no-core --contrib-destination=. --no-gitinfofile --working-copy --strict=0 konzilo_kickstart.make -y

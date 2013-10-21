@@ -14,6 +14,9 @@ projects[coder][version] = 2.0-beta2
 projects[coder][subdir] = contrib
 
 projects[ctools][version] = 1.3
+projects[ctools][type] = module
+projects[ctools][download][type] = git
+projects[ctools][download][revision] = 9d092cc
 projects[ctools][subdir] = contrib
 
 projects[diff][version] = 3.2

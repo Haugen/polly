@@ -41,6 +41,7 @@ dependencies[] = media_wysiwyg_view_mode
 dependencies[] = views
 dependencies[] = views_content
 dependencies[] = backref_field
+dependencies[] = menublock
 
 ; Features
 dependencies[] = konzilo_endpoint

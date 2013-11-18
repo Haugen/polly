@@ -57,7 +57,7 @@ projects[email][subdir] = contrib
 projects[features][version] = 2.0-rc3
 projects[features][subdir] = contrib
 
-projects[file_entity][version] = 2.0-alpha2
+projects[file_entity][version] = 2.0-alpha3
 projects[file_entity][subdir] = contrib
 
 projects[globalredirect][version] = 1.5
@@ -102,6 +102,9 @@ projects[markdown][subdir] = contrib
 projects[media][version] = 2.0-alpha2
 projects[media][subdir] = contrib
 
+projects[menu_block][version] = 2.3
+projects[menu_block][subdir] = contrib
+
 projects[metatag][version] = 1.0-beta7
 projects[metatag][subdir] = contrib
 
@@ -124,6 +127,9 @@ projects[panels][subdir] = contrib
 
 projects[panels_everywhere][version] = 1.0-rc1
 projects[panels_everywhere][subdir] = contrib
+
+projects[panels_ref_formatter][version] = 1.0-alpha5
+projects[panels_ref_formatter][subdir] = contrib
 
 projects[panopoly_theme][version] = 1.0-rc5
 projects[panopoly_theme][subdir] = contrib

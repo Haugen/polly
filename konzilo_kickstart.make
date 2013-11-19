@@ -29,9 +29,6 @@ projects[defaultconfig][patch][1900574] = https://drupal.org/files/1900574.defau
 projects[devel][version] = 1.3
 projects[devel][subdir] = contrib
 
-projects[ds][version] = 2.6
-projects[ds][subdir] = contrib
-
 projects[elysia_cron][version] = 2.1
 projects[elysia_cron][subdir] = contrib
 
@@ -81,12 +78,6 @@ projects[konzilo_features][download][branch] = 7.x-1.x
 projects[konzilo_features][download][url] = git@github.com:konzilo/konzilo_features.git
 projects[konzilo_features][subdir] = contrib
 
-projects[backref_field][type] = module
-projects[backref_field][download][type] = git
-projects[backref_field][download][branch] = master
-projects[backref_field][download][url] = git@github.com:konzilo/backref_field.git
-projects[backref_field][subdir] = contrib
-
 projects[libraries][version] = 2.1
 projects[libraries][subdir] = contrib
 
@@ -130,9 +121,6 @@ projects[panels_everywhere][subdir] = contrib
 
 projects[panels_ref_formatter][version] = 1.0-alpha5
 projects[panels_ref_formatter][subdir] = contrib
-
-projects[panopoly_theme][version] = 1.0-rc5
-projects[panopoly_theme][subdir] = contrib
 
 projects[panelizer][version] = 3.1
 projects[panelizer][subdir] = contrib

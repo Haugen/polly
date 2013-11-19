@@ -20,7 +20,6 @@ dependencies[] = oauth2_server
 dependencies[] = konzilo
 dependencies[] = panels
 dependencies[] = panels_everywhere
-dependencies[] = panopoly_theme
 dependencies[] = panelizer
 dependencies[] = panels_ipe
 dependencies[] = ctools
@@ -38,7 +37,7 @@ dependencies[] = media_internet
 dependencies[] = media_wysiwyg_view_mode
 dependencies[] = views
 dependencies[] = views_content
-dependencies[] = backref_field
+dependencies[] = panels_ref_formatter
 dependencies[] = menu_block
 
 ; Features

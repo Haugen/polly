@@ -184,3 +184,7 @@ projects[shiny][version] = 1.3
 projects[zilophy][type] = theme
 projects[zilophy][download][type] = git
 projects[zilophy][download][url] = git@github.com:konzilo/zilophy.git
+
+projects[mothership][type] = theme
+projects[mothership][download][type] = git
+projects[mothership][download][revision] = ac8fd6a

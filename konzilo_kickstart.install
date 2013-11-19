@@ -12,7 +12,7 @@ function konzilo_kickstart_install() {
   theme_enable(array('shiny'));
   $variables = array(
     'admin_theme' => 'shiny',
-    'theme_default' => 'bartik',
+    'theme_default' => 'zilophy',
     'node_admin_theme' => 1,
   );
   foreach ($variables as $key => $variable) {

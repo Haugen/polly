@@ -192,3 +192,7 @@ libraries[flexslider][destination] = libraries
 
 projects[shiny][type] = theme
 projects[shiny][version] = 1.3
+
+projects[zilophy][type] = theme
+projects[zilophy][download][type] = git
+projects[zilophy][download][url] = git@github.com:konzilo/zilophy.git

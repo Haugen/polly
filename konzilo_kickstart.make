@@ -1,5 +1,5 @@
 api = 2
-core = 7.23
+core = 7.24
 
 projects[advancedqueue][version] = 1.0-alpha2
 projects[advancedqueue][subdir] = contrib
@@ -45,13 +45,13 @@ projects[entity_mapper][subdir] = contrib
 projects[entity_translation][version] = 1.0-beta3
 projects[entity_translation][subdir] = contrib
 
-projects[entityreference][version] = 1.0
+projects[entityreference][version] = 1.1
 projects[entityreference][subdir] = contrib
 
 projects[email][version] = 1.2
 projects[email][subdir] = contrib
 
-projects[features][version] = 2.0-rc3
+projects[features][version] = 2.0
 projects[features][subdir] = contrib
 
 projects[file_entity][version] = 2.0-alpha3

@@ -180,7 +180,7 @@ libraries[flexslider][download][url] = https://github.com/woothemes/FlexSlider/a
 libraries[flexslider][destination] = libraries
 
 projects[shiny][type] = theme
-projects[shiny][version] = 1.3
+projects[shiny][version] = 1.4
 
 projects[zilophy][type] = theme
 projects[zilophy][download][type] = git

@@ -167,6 +167,9 @@ projects[wysiwyg][download][revision] = ee64524
 projects[xmlsitemap][version] = 2.0-rc2
 projects[xmlsitemap][subdir] = contrib
 
+projects[xautoload][version] = 3.3
+projects[xautoload][subdir] = contrib
+
 libraries[ckeditor][download][type] = get
 libraries[ckeditor][download][url] = http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.1.3/ckeditor_4.1.3_standard.zip
 libraries[ckeditor][destination] = libraries

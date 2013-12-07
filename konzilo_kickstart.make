@@ -99,14 +99,8 @@ projects[menu_block][subdir] = contrib
 projects[metatag][version] = 1.0-beta7
 projects[metatag][subdir] = contrib
 
-
-; Use latest version for bug fixes.
-;projects[oauth2_server][type] = module
 projects[oauth2_server][version] = 1.0-rc3
-;projects[oauth2_server][download][type] = git
-;projects[oauth2_server][download][revision] = 879a63a
 projects[oauth2_server][subdir] = contrib
-;projects[oauth2_server][patch][2079279] = https://drupal.org/files/2079279.oauth2_server.entity_ui_issue.patch
 
 ;projects[oembed][version] = 1.0-rc2
 projects[oembed][subdir] = contrib
@@ -175,7 +169,7 @@ libraries[ckeditor][download][url] = http://download.cksource.com/CKEditor/CKEdi
 libraries[ckeditor][destination] = libraries
 
 libraries[oauth2-server-php][download][type] = get
-libraries[oauth2-server-php][download][url] = https://github.com/bshaffer/oauth2-server-php/archive/v0.8.tar.gz
+libraries[oauth2-server-php][download][url] = https://github.com/bshaffer/oauth2-server-php/archive/v1.0.tar.gz
 libraries[oauth2-server-php][destination] = libraries
 
 libraries[flexslider][download][type] = get

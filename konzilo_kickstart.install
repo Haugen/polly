@@ -15,8 +15,7 @@ function konzilo_kickstart_install() {
     'admin_theme' => 'shiny',
     'theme_default' => 'zilophy',
     'node_admin_theme' => 1,
-    'site_frontpage' => 'blog'
-    ''
+    'site_frontpage' => 'blog',
   );
   foreach ($variables as $key => $variable) {
     variable_set($key, $variable);

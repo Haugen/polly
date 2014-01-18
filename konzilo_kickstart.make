@@ -183,5 +183,7 @@ projects[zilophy][type] = theme
 projects[zilophy][download][type] = git
 projects[zilophy][download][url] = git@github.com:konzilo/zilophy.git
 
-projects[aurora][type] = theme
-projects[aurora][version] = 3.2
+projects[mothership][type] = theme
+projects[mothership][download][type] = git
+projects[mothership][download][revision] = ac8fd6a
+projects[mothership][patch][2139097] = https://drupal.org/files/issues/2139097_change_variable_name.patch

@@ -1,5 +1,5 @@
 api = 2
-core = 7.24
+core = 7.x
 
 projects[advancedqueue][version] = 1.0-alpha2
 projects[advancedqueue][subdir] = contrib
@@ -28,6 +28,9 @@ projects[defaultconfig][patch][1900574] = https://drupal.org/files/1900574.defau
 
 projects[devel][version] = 1.3
 projects[devel][subdir] = contrib
+
+projects[elements][version] = 1.4
+projects[elements][subdir] = contrib
 
 projects[elysia_cron][version] = 2.1
 projects[elysia_cron][subdir] = contrib
@@ -63,6 +66,9 @@ projects[globalredirect][subdir] = contrib
 projects[i18n][version] = 1.9
 projects[i18n][subdir] = contrib
 
+projects[html5_tools][version] = 1.2
+projects[html5_tools][subdir] = contrib
+
 projects[inline_entity_form][version] = 1.3
 projects[inline_entity_form][subdir] = contrib
 
@@ -86,6 +92,9 @@ projects[link][subdir] = contrib
 
 projects[linkit][version] = 2.6
 projects[linkit][subdir] = contrib
+
+projects[magic][version] = 1.5
+projects[magic][subdir] = contrib
 
 projects[markdown][version] = 1.2
 projects[markdown][subdir] = contrib

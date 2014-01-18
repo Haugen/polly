@@ -1,0 +1,17 @@
+name = Konzilo SEO
+core = 7.x
+package = Features
+dependencies[] = globalredirect
+dependencies[] = metatag
+dependencies[] = path
+dependencies[] = pathauto
+dependencies[] = token
+dependencies[] = transliteration
+dependencies[] = xmlsitemap
+dependencies[] = xmlsitemap_custom
+dependencies[] = xmlsitemap_node
+features[features_api][] = api:2
+features[metatag][] = global
+features[metatag][] = global:frontpage
+features[metatag][] = node
+project path = profiles/konzilo_kickstart/modules/features

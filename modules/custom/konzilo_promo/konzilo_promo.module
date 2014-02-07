@@ -1,0 +1,90 @@
+<?php
+/**
+ * @file
+ * Code for the Konzilo promo feature.
+ */
+
+include_once 'konzilo_promo.features.inc';
+
+/**
+ * Add custom style to AIR
+ * @param $style
+ */
+function konzilo_promo_air_styles() {
+  return array(
+    'slideshow' => array(
+      'label' => 'Slideshow',
+      'theme_function' => 'konzilo_promo_content_slideshow',
+      'view_modes' => array(
+        'konzilo_slideshow',
+      ),
+    ),
+  );
+}
+
+/**
+ * @return array
+ */
+function konzilo_promo_libraries_info() {
+  $libraries = array();
+  $libraries['flexslider'] = array(
+    'name' => 'Flexslider library',
+    'files' => array(
+      'js' => array('jquery.flexslider-min.js'),
+      'css' => array('flexslider.css'),
+    ),
+  );
+
+  return $libraries;
+}
+
+
+/**
+ * @param $existing
+ * @param $type
+ * @param $theme
+ * @param $path
+ * @return array
+ */
+function konzilo_promo_theme($existing, $type, $theme, $path) {
+  return array(
+    'konzilo_promo_content_slideshow' => array(
+      'variables' => array('items' => array()),
+    ),
+    'konzilo_promo_content_slideshow_item' => array(
+      'variables' => array('item' => array()),
+    ),
+  );
+}
+
+/**
+ * @param $variables
+ * @return string
+ */
+function theme_konzilo_promo_content_slideshow($variables) {
+  drupal_add_js(libraries_get_path('flexslider') . '/jquery.flexslider-min.js');
+  drupal_add_css(libraries_get_path('flexslider') . '/flexslider.css');
+  drupal_add_js(drupal_get_path('module', 'konzilo_promo') . '/js/kkp.flexslider.js');
+
+  $items = $variables['items'];
+
+  $out = '<div class="flexslider">';
+  $out .= '<div class="slides">';
+
+  foreach ($items as $item) {
+    $out .= theme('konzilo_promo_content_slideshow_item', array('item' => $item));
+  }
+
+  $out .= '</div>';
+  $out .= '</div>';
+
+  return $out;
+}
+
+/**
+ * @param $variables
+ * @return string
+ */
+function theme_konzilo_promo_content_slideshow_item($variables) {
+  return '<div class="slide-item">' . drupal_render($variables['item']) . '</div>';
+}

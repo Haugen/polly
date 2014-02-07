@@ -1,4 +1,0 @@
-name = Konzilo Connect
-core = 7.x
-package = Konzilo
-dependencies[] = entity_mapper

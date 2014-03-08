@@ -34,5 +34,4 @@ function konzilo_kickstart_create_page_node() {
   $node->language = LANGUAGE_NONE;
   node_save($node);
 
-
 }

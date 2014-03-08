@@ -87,20 +87,24 @@ projects[link][subdir] = contrib
 projects[linkit][version] = 2.6
 projects[linkit][subdir] = contrib
 
-projects[magic][version] = 1.5
-projects[magic][subdir] = contrib
-
 projects[markdown][version] = 1.2
 projects[markdown][subdir] = contrib
 
-projects[media][version] = 2.0-alpha2
+; Media
+projects[media][type] = module
+projects[media][download][type] = git
+projects[media][download][revision] = 2f828ea
 projects[media][subdir] = contrib
+projects[media][patch][2126755] = https://drupal.org/files/issues/media-wysiwyg-improve-our-macro-handling-2126755-58.patch
 
 projects[menu_block][version] = 2.3
 projects[menu_block][subdir] = contrib
 
 projects[metatag][version] = 1.0-beta7
 projects[metatag][subdir] = contrib
+
+projects[redirect][version] = 1.0-rc1
+projects[redirect][subdir] = contrib
 
 projects[oauth2_server][version] = 1.0-rc3
 projects[oauth2_server][subdir] = contrib
@@ -111,7 +115,8 @@ projects[oembed][type] = module
 projects[oembed][download][type] = git
 projects[oembed][download][revision] = 63898e1
 
-projects[panels][version] = 3.3
+projects[panels][download][type] = git
+projects[panels][download][revision] = 2bb470ee3520ecac66e14d452b9d50909bf6a425
 projects[panels][subdir] = contrib
 
 projects[panels_everywhere][version] = 1.0-rc1
@@ -155,11 +160,16 @@ projects[variable][subdir] = contrib
 projects[views][version] = 3.7
 projects[views][subdir] = contrib
 
+projects[views_bulk_operations][version] = 3.2
+projects[views_bulk_operations][subdir] = contrib
+
+; Wysiwyg
 projects[wysiwyg][type] = module
 projects[wysiwyg][version] = 2.2
 projects[wysiwyg][subdir] = contrib
 projects[wysiwyg][download][type] = git
 projects[wysiwyg][download][revision] = ee64524
+projects[wysiwyg][patch][1956778] = https://drupal.org/files/wysiwyg-ckeditor-acf-1956778-37.patch
 
 projects[xmlsitemap][version] = 2.0-rc2
 projects[xmlsitemap][subdir] = contrib
@@ -168,7 +178,7 @@ projects[xautoload][version] = 3.3
 projects[xautoload][subdir] = contrib
 
 libraries[ckeditor][download][type] = get
-libraries[ckeditor][download][url] = http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.1.3/ckeditor_4.1.3_standard.zip
+libraries[ckeditor][download][url] = http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.3.2/ckeditor_4.3.2_standard.zip
 libraries[ckeditor][destination] = libraries
 
 libraries[oauth2-server-php][download][type] = get
@@ -181,14 +191,3 @@ libraries[flexslider][destination] = libraries
 
 projects[shiny][type] = theme
 projects[shiny][version] = 1.4
-
-projects[zilophy][type] = theme
-projects[zilophy][download][type] = git
-projects[zilophy][download][url] = git@github.com:konzilo/zilophy-aurora.git
-
-projects[sillyphy][type] = theme
-projects[sillyphy][download][type] = git
-projects[sillyphy][download][url] = git@github.com:konzilo/zilophy.git
-
-projects[aurora][type] = theme
-projects[aurora][version] = 3.2

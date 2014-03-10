@@ -54,6 +54,7 @@ function konzilo_article_default_page_manager_handlers() {
       'content' => NULL,
       'content_bottom' => NULL,
     ),
+    'style' => 'naked',
   );
   $display->cache = array();
   $display->title = '';
@@ -62,25 +63,15 @@ function konzilo_article_default_page_manager_handlers() {
     $pane = new stdClass();
     $pane->pid = 'new-1';
     $pane->panel = 'content';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_konzilo_headline';
+    $pane->type = 'pane_messages';
+    $pane->subtype = 'pane_messages';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array(
-      'label' => 'hidden',
-      'formatter' => 'text_default',
-      'delta_limit' => 0,
-      'delta_offset' => '0',
-      'delta_reversed' => FALSE,
-      'formatter_settings' => array(),
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
+    $pane->configuration = array();
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
-      'style' => 'h1_title',
+      'style' => 'naked',
     );
     $pane->css = array();
     $pane->extras = array();
@@ -92,7 +83,7 @@ function konzilo_article_default_page_manager_handlers() {
     $pane->pid = 'new-2';
     $pane->panel = 'content';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_konzilo_lead';
+    $pane->subtype = 'node:field_konzilo_body';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -121,35 +112,6 @@ function konzilo_article_default_page_manager_handlers() {
     $pane->pid = 'new-3';
     $pane->panel = 'content';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_konzilo_body';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'label' => 'hidden',
-      'formatter' => 'text_default',
-      'delta_limit' => 0,
-      'delta_offset' => '0',
-      'delta_reversed' => FALSE,
-      'formatter_settings' => array(),
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-      'style' => 'naked',
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['content'][2] = 'new-3';
-    $pane = new stdClass();
-    $pane->pid = 'new-4';
-    $pane->panel = 'content';
-    $pane->type = 'entity_field';
     $pane->subtype = 'node:field_konzilo_author';
     $pane->shown = TRUE;
     $pane->access = array();
@@ -175,12 +137,12 @@ function konzilo_article_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['content'][3] = 'new-4';
+    $display->content['new-3'] = $pane;
+    $display->panels['content'][2] = 'new-3';
     $pane = new stdClass();
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-4';
     $pane->panel = 'content_top';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_konzilo_file';
@@ -205,15 +167,74 @@ function konzilo_article_default_page_manager_handlers() {
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
+      'style' => 'naked',
     );
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
+    $display->content['new-4'] = $pane;
+    $display->panels['content_top'][0] = 'new-4';
+    $pane = new stdClass();
+    $pane->pid = 'new-5';
+    $pane->panel = 'content_top';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_konzilo_headline';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'hidden',
+      'formatter' => 'text_default',
+      'delta_limit' => 0,
+      'delta_offset' => '0',
+      'delta_reversed' => FALSE,
+      'formatter_settings' => array(),
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+      'style' => 'h1_title',
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
     $display->content['new-5'] = $pane;
-    $display->panels['content_top'][0] = 'new-5';
+    $display->panels['content_top'][1] = 'new-5';
+    $pane = new stdClass();
+    $pane->pid = 'new-6';
+    $pane->panel = 'content_top';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_konzilo_lead';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'hidden',
+      'formatter' => 'text_default',
+      'delta_limit' => 0,
+      'delta_offset' => '0',
+      'delta_reversed' => FALSE,
+      'formatter_settings' => array(),
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+      'style' => 'naked',
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $display->content['new-6'] = $pane;
+    $display->panels['content_top'][2] = 'new-6';
   $display->hide_title = PANELS_TITLE_PANE;
-  $display->title_pane = 'new-1';
+  $display->title_pane = 'new-5';
   $handler->conf['display'] = $display;
   $export['node_view_panel_context'] = $handler;
 
@@ -262,7 +283,7 @@ function konzilo_article_default_page_manager_pages() {
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'one-column';
+  $display->layout = 'content';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -302,6 +323,30 @@ function konzilo_article_default_page_manager_pages() {
     $pane->locks = array();
     $display->content['new-1'] = $pane;
     $display->panels['content'][0] = 'new-1';
+    $pane = new stdClass();
+    $pane->pid = 'new-2';
+    $pane->panel = 'content_top';
+    $pane->type = 'page_title';
+    $pane->subtype = 'page_title';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'markup' => 'h1',
+      'class' => '',
+      'id' => '',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-2'] = $pane;
+    $display->panels['content_top'][0] = 'new-2';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-1';
   $handler->conf['display'] = $display;

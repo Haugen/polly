@@ -86,11 +86,7 @@ function konzilo_article_field_default_field_instances() {
     'label' => 'Body',
     'required' => 0,
     'settings' => array(
-      'display_summary' => 0,
-      'linkit' => array(
-        'enable' => 0,
-        'insert_plugin' => '',
-      ),
+      'display_summary' => 1,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),

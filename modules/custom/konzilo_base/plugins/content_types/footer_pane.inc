@@ -28,14 +28,11 @@ function konzilo_base_footer_pane_content_type_render($subtype, $conf, $panel_ar
   $googleplus = variable_get('konzilo_page_googleplus', '');
   $rss = variable_get('konzilo_page_rss', '');
 
-  $markup = '<div class="footer-container clearfix">';
-  $markup .= '<span class="group group1">';
-    $markup .= '<div class="logo footer-info"><img src="/' . $logo . '"></div>';
-    $markup .= '<div class="address footer-info">' . check_markup($address['value'], $address['format']) . '</div>';
-  $markup .= '</span>';
-
-  $markup .= '<span class="group group2">';
-    $markup .= '<div class="socialmedia footer-info">';
+  $markup = '<div class="footer-container">';
+  $markup .= '<span class="group"><div class="logo footer-info"><img src="/' . $logo . '"></div>';
+  $markup .= '<div class="address footer-info">' . check_markup($address['value'], $address['format']) . '</div></span>';
+  $markup .= '<span class="group"><div class="contact footer-info">' . check_markup($contact['value'], $contact['format']) . '</div>';
+  $markup .= '<div class="socialmedia footer-info">';
   $markup .= '<ul>';
   if ($facebook) {
     $markup .= '<li><a href="' . $facebook . '"><i class="icon icon-facebook"></i><span>Facebook</span></a></li>';
@@ -56,9 +53,7 @@ function konzilo_base_footer_pane_content_type_render($subtype, $conf, $panel_ar
       $markup .= '<li><a href="' . $rss . '"><i class="icon icon-rss"></i><span>RSS</span></a></li>';
   }
 
-  $markup .= '</ul></div>';
-  $markup .= '<div class="contact footer-info">' . check_markup($contact['value'], $contact['format']) . '</div>';
-  $markup .= '</span></div>';
+  $markup .= '</ul></div></span></div>';
 
   $block = new stdClass();
   $block->module = 'konzilo_base';

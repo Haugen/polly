@@ -36,6 +36,14 @@ function konzilo_author_default_panels_mini() {
       'context' => 'requiredcontext_entity:node_1',
       'id' => 1,
     ),
+    1 => array(
+      'identifier' => 'File from Content (on Content: Files [field_konzilo_file])',
+      'keyword' => 'file',
+      'name' => 'entity_from_field:field_konzilo_file-node-file',
+      'delta' => '0',
+      'context' => 'requiredcontext_entity:node_1',
+      'id' => 1,
+    ),
   );
   $display = new panels_display();
   $display->layout = 'author-content';
@@ -69,6 +77,7 @@ function konzilo_author_default_panels_mini() {
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
+      'style' => 'naked',
     );
     $pane->css = array();
     $pane->extras = array();
@@ -97,6 +106,7 @@ function konzilo_author_default_panels_mini() {
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
+      'style' => 'naked',
     );
     $pane->css = array();
     $pane->extras = array();
@@ -107,26 +117,125 @@ function konzilo_author_default_panels_mini() {
     $pane = new stdClass();
     $pane->pid = 'new-3';
     $pane->panel = 'image';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_konzilo_file';
+    $pane->type = 'file_display';
+    $pane->subtype = 'file_display';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'hidden',
-      'formatter' => 'file_rendered',
-      'delta_limit' => '0',
-      'delta_offset' => '0',
-      'delta_reversed' => 0,
-      'formatter_settings' => array(
-        'file_view_mode' => 'teaser',
+      'displays' => array(
+        'file_field_file_audio' => array(
+          'status' => 0,
+          'weight' => '0',
+          'settings' => array(
+            'controls' => 1,
+            'autoplay' => 0,
+            'loop' => 0,
+            'multiple_file_behavior' => 'tags',
+          ),
+        ),
+        'file_field_file_download_link' => array(
+          'status' => 0,
+          'weight' => '0',
+          'settings' => array(
+            'text' => 'Download [file:name]',
+          ),
+        ),
+        'file_field_file_default' => array(
+          'status' => 0,
+          'weight' => '0',
+        ),
+        'file_image' => array(
+          'status' => 0,
+          'weight' => '0',
+          'settings' => array(
+            'image_style' => '',
+            'alt' => '[file:field_file_image_alt_text]',
+            'title' => '[file:field_file_image_title_text]',
+          ),
+        ),
+        'file_field_image' => array(
+          'status' => 1,
+          'weight' => '0',
+          'settings' => array(
+            'image_style' => 'thumbnail',
+            'image_link' => '',
+          ),
+        ),
+        'file_field_media_large_icon' => array(
+          'status' => 0,
+          'weight' => '0',
+        ),
+        'file_field_panels_ref_ref_formatter_mini' => array(
+          'status' => 0,
+          'weight' => '0',
+          'settings' => array(
+            'mini_panel' => '',
+            'language_filter' => 1,
+            'cols' => '0',
+          ),
+        ),
+        'oembed' => array(
+          'status' => 0,
+          'weight' => '0',
+          'settings' => array(
+            'width' => '560',
+            'height' => '340',
+            'wmode' => '',
+          ),
+        ),
+        'oembed_image' => array(
+          'status' => 0,
+          'weight' => '0',
+          'settings' => array(
+            'image_style' => '',
+            'alt' => '[file:field_file_image_alt_text]',
+            'title' => '[file:field_file_image_title_text]',
+          ),
+        ),
+        'oembed_thumbnail' => array(
+          'status' => 0,
+          'weight' => '0',
+          'settings' => array(
+            'width' => '180',
+            'height' => '',
+          ),
+        ),
+        'file_field_file_rendered' => array(
+          'status' => 0,
+          'weight' => '0',
+          'settings' => array(
+            'file_view_mode' => 'default',
+          ),
+        ),
+        'file_field_file_table' => array(
+          'status' => 0,
+          'weight' => '0',
+        ),
+        'file_field_file_url_plain' => array(
+          'status' => 0,
+          'weight' => '0',
+        ),
+        'file_field_file_video' => array(
+          'status' => 0,
+          'weight' => '0',
+          'settings' => array(
+            'controls' => 1,
+            'autoplay' => 0,
+            'loop' => 0,
+            'width' => '',
+            'height' => '',
+            'multiple_file_behavior' => 'tags',
+          ),
+        ),
       ),
-      'context' => 'requiredcontext_entity:node_1',
+      'context' => 'relationship_entity_from_field:field_konzilo_file-node-file_1',
       'override_title' => 1,
       'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
+      'style' => 'naked',
     );
     $pane->css = array();
     $pane->extras = array();
@@ -150,6 +259,7 @@ function konzilo_author_default_panels_mini() {
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
+      'style' => 'naked',
     );
     $pane->css = array();
     $pane->extras = array();

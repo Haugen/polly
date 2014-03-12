@@ -10,6 +10,9 @@ projects[air][download][branch] = 7.x-1.x
 projects[air][download][url] = git@github.com:konzilo/air.git
 projects[air][subdir] = contrib
 
+projects[mollom][version] = 2.9
+projects[mollom][subdir] = contrib
+
 projects[coder][version] = 2.0-beta2
 projects[coder][subdir] = contrib
 

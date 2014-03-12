@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the konzilo_admin feature.
+ */
+
+include_once 'konzilo_admin.features.inc';

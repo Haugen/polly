@@ -1,0 +1,53 @@
+<?php
+/**
+ * @file
+ * Code for the Polly Connect module .
+ */
+
+/**
+ * Implements hook_entity_mapper_mappers()
+ * @return EntityMapper[]
+ */
+function polly_connect_entity_mapper_mappers() {
+  $statusMapper = new PropertyMapper('published', 'status');
+  $statusMapper->addFormatter(function ($value) {
+      return $value ? 1 : 0;
+  });
+
+  $body_mapper = new PropertyMapper('content.text.body', 'field_polly_body');
+  $body_mapper->addFormatter(function ($value){
+      return array('value' => $value, 'format' => 'markdown');
+    });
+
+  $about_mapper = new PropertyMapper('about', 'field_polly_body');
+  $about_mapper->addFormatter(function ($value){
+      return array('value' => $value, 'format' => 'markdown');
+    });
+
+
+  $authorMapper = entity_mapper('author', 'polly_author', 'node')
+    ->setDefaults(array('type' => 'polly_author'))
+    ->addMapping(new PropertyMapper('name', 'title'))
+    ->addMapping($about_mapper)
+    ->addMapping(new PollyFileListPropertyMapper('image', 'field_polly_file'));
+
+  $mapper = entity_mapper('article', 'polly_article', 'node')
+    ->setDefaults(array('type' => 'polly_article'))
+    ->addMapping(new PropertyMapper('title', 'title'))
+    ->addMapping(new PropertyMapper('content.text.headline', 'field_polly_headline'))
+    ->addMapping(new PropertyMapper('content.text.lead', 'field_polly_lead'))
+    ->addMapping($body_mapper)
+    ->addMapping(new EntityPropertyMapper('content.author', 'field_polly_author', $authorMapper))
+    ->addMapping(new PollyFileListPropertyMapper('content.images.images', 'field_polly_file'))
+    ->addMapping($statusMapper);
+
+  return array(
+    'polly_connect' => array(
+      'label' => 'Polly connect',
+      'mappers' => array(
+        'polly_article' => $mapper,
+        'polly_file' => new FileEntityMapper('file'),
+      ),
+    ),
+  );
+}

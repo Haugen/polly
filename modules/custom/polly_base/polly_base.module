@@ -1,0 +1,172 @@
+<?php
+/**
+ * @file
+ * Code for the polly_base feature.
+ */
+
+include_once 'polly_base.features.inc';
+
+/**
+ * Implementation of hook_ctools_plugin_directory()
+ */
+function polly_base_ctools_plugin_directory($module, $plugin) {
+  if (($module == 'panelizer'  || $module == 'page_manager' || $module == 'panels' || $module == 'ctools' || $module == 'stylizer') && !empty($plugin)) {
+    return "plugins/$plugin";
+  }
+}
+
+/**
+ * Implementation of hook_menu()
+ */
+function polly_base_menu() {
+  $items = array();
+  $items['admin/config/media/polly-settings'] = array(
+    'title' => 'Polly page settings',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('polly_base_polly_page_settings'),
+    'access arguments' => array('administer polly page settings'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  return $items;
+}
+
+/**
+ * Implementation of hook_permission()
+ */
+function polly_base_permission() {
+  return array(
+    'administer polly page settings' => array(
+      'title' => t('Administer Polly page settings'),
+      'description' => t('Perform settings for Polly kickstart page elements'),
+    ),
+  );
+}
+
+/**
+ * Menu callback for polly page settings
+ */
+function polly_base_polly_page_settings() {
+  $form = array();
+
+  $form['footer'] = array(
+      '#type' => 'vertical_tabs',
+  );
+
+  $form['footer']['footer_top'] = array(
+      '#type' => 'fieldset',
+      '#title' => t('Footer Top'),
+      '#collapsible' => TRUE,
+      '#collapsed' => FALSE,
+  );
+
+  $form['footer']['footer_top']['polly_page_logo'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Logotype path'),
+      '#default_value' => variable_get('polly_page_logo', ''),
+      '#size' => 90,
+      '#maxlength' => 255,
+  );
+
+  $polly_page_address = variable_get('polly_page_address');
+  $form['footer']['footer_top']['polly_page_address'] = array(
+    '#type' => 'text_format',
+    '#title' => t('Address'),
+    '#default_value' => $polly_page_address['value'],
+    '#rows' => 5,
+    '#format' => $polly_page_address['format'],
+  );
+
+  $polly_page_contact = variable_get('polly_page_contact');
+  $form['footer']['footer_top']['polly_page_contact'] = array(
+    '#type' => 'text_format',
+    '#title' => t('Contact'),
+    '#default_value' => $polly_page_contact['value'],
+    '#rows' => 5,
+    '#format' => $polly_page_contact['format'],
+  );
+
+  $form['footer']['footer_top']['socialmedia'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Social media links'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );
+//  $form['socialmedia']['header'] = array(
+//    '#type' => 'textfield',
+//    '#title' => t('Social media header'),
+//    '#default_value' => $conf['header'],
+//    '#size' => 90,
+//    '#maxlength' => 255,
+//  );
+  $form['footer']['footer_top']['socialmedia']['polly_page_facebook'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Facebook URL'),
+    '#default_value' => variable_get('polly_page_facebook', ''),
+    '#size' => 90,
+    '#maxlength' => 255,
+  );
+  $form['footer']['footer_top']['socialmedia']['polly_page_twitter'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Twitter URL'),
+    '#default_value' => variable_get('polly_page_twitter', ''),
+    '#size' => 90,
+    '#maxlength' => 255,
+  );
+  $form['footer']['footer_top']['socialmedia']['polly_page_instagram'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Instagram URL'),
+    '#default_value' => variable_get('polly_page_instagram', ''),
+    '#size' => 90,
+    '#maxlength' => 255,
+  );
+  $form['footer']['footer_top']['socialmedia']['polly_page_linkedin'] = array(
+      '#type' => 'textfield',
+      '#title' => t('LinkedIn URL'),
+      '#default_value' => variable_get('polly_page_linkedin', ''),
+      '#size' => 90,
+      '#maxlength' => 255,
+  );
+  $form['footer']['footer_top']['socialmedia']['polly_page_googleplus'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Google+ URL'),
+      '#default_value' => variable_get('polly_page_googleplus', ''),
+      '#size' => 90,
+      '#maxlength' => 255,
+  );
+  $form['footer']['footer_top']['socialmedia']['polly_page_rss'] = array(
+      '#type' => 'textfield',
+      '#title' => t('RSS URL'),
+      '#default_value' => variable_get('polly_page_rss', ''),
+      '#size' => 90,
+      '#maxlength' => 255,
+  );
+
+
+  $form['footer']['footer_bottom'] = array(
+      '#type' => 'fieldset',
+      '#title' => t('Footer Bottom'),
+      '#collapsible' => TRUE,
+      '#collapsed' => FALSE,
+  );
+
+  $polly_page_footer_bottom_left = variable_get('polly_page_footer_bottom_left');
+  $form['footer']['footer_bottom']['polly_page_footer_bottom_left'] = array(
+      '#type' => 'text_format',
+      '#title' => t('Footer bottom left'),
+      '#default_value' => $polly_page_footer_bottom_left['value'],
+      '#rows' => 3,
+      '#format' => $polly_page_footer_bottom_left['format'],
+  );
+
+  $polly_page_footer_bottom_right = variable_get('polly_page_footer_bottom_right');
+  $form['footer']['footer_bottom']['polly_page_footer_bottom_right'] = array(
+      '#type' => 'text_format',
+      '#title' => t('Fotter bottom right'),
+      '#default_value' => $polly_page_footer_bottom_right['value'],
+      '#rows' => 3,
+      '#format' => $polly_page_footer_bottom_right['format'],
+  );
+
+  return system_settings_form($form);
+}

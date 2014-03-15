@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Polly Pages feature.
+ */
+
+include_once 'polly_pages.features.inc';

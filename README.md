@@ -1,4 +1,4 @@
-konzilo_kickstart
+polly
 =================
 
-Konzilo project kickstart profile for Drupal
+Polly project kickstart profile for Drupal

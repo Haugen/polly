@@ -1,0 +1,15 @@
+name = Polly Endpoint
+description = Allows polly clients to connect to this Drupal site.
+core = 7.x
+package = Features
+php = 5.2.4
+dependencies[] = ctools
+dependencies[] = entity
+dependencies[] = oauth2_server
+dependencies[] = rest_server
+dependencies[] = services
+features[ctools][] = services:services:3
+features[features_api][] = api:2
+features[oauth2_server][] = polly
+features[services_endpoint][] = polly
+project path = profiles/polly/modules/features

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the polly_admin feature.
+ */
+
+include_once 'polly_admin.features.inc';

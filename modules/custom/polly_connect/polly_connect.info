@@ -1,0 +1,4 @@
+name = Polly Connect
+core = 7.x
+package = Polly
+dependencies[] = entity_mapper

@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Konzilo Pages feature.
- */
-
-include_once 'konzilo_pages.features.inc';

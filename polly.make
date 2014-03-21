@@ -81,6 +81,18 @@ projects[konzilo][download][branch] = 7.x-1.x
 projects[konzilo][download][url] = git@github.com:konzilo/drupal-konzilo.git
 projects[konzilo][subdir] = contrib
 
+; Zilophy theme
+projects[zilophy][type] = theme
+projects[zilophy][download][type] = git
+projects[zilophy][download][branch] = master
+projects[zilophy][download][url] = git@github.com:konzilo/zilophy.git
+
+; Seventeen admin theme
+projects[seventeen][type] = theme
+projects[seventeen][download][type] = git
+projects[seventeen][download][branch] = master
+projects[seventeen][download][url] = git@github.com:konzilo/seventeen.git
+
 projects[libraries][version] = 2.1
 projects[libraries][subdir] = contrib
 

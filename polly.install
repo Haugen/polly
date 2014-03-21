@@ -9,7 +9,7 @@
  */
 function polly_install() {
   // We use seven as our admin theme.
-  theme_enable(array('seventeen', 'zilophy', 'mothership'));
+  theme_enable(array('seventeen', 'zilophy'));
   theme_disable(array('bartik'));
   $variables = array(
     'admin_theme' => 'seventeen',

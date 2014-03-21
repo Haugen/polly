@@ -7,7 +7,7 @@ projects[advancedqueue][subdir] = contrib
 projects[air][type] = module
 projects[air][download][type] = git
 projects[air][download][branch] = 7.x-1.x
-projects[air][download][url] = git@github.com:polly/air.git
+projects[air][download][url] = git@github.com:konzilo/air.git
 projects[air][subdir] = contrib
 
 projects[mollom][version] = 2.9
@@ -45,7 +45,7 @@ projects[entity][patch][1780646] = https://drupal.org/files/1780646-202-entity-n
 projects[entity_mapper][type] = module
 projects[entity_mapper][download][type] = git
 projects[entity_mapper][download][branch] = 7.x-1.x
-projects[entity_mapper][download][url] = git@github.com:polly/drupal-entity_mapper.git
+projects[entity_mapper][download][url] = git@github.com:konzilo/drupal-entity_mapper.git
 projects[entity_mapper][subdir] = contrib
 
 projects[entity_translation][version] = 1.0-beta3
@@ -75,11 +75,11 @@ projects[html5_tools][subdir] = contrib
 projects[inline_entity_form][version] = 1.3
 projects[inline_entity_form][subdir] = contrib
 
-projects[polly][type] = module
-projects[polly][download][type] = git
-projects[polly][download][branch] = 7.x-1.x
-projects[polly][download][url] = git@github.com:polly/drupal-polly.git
-projects[polly][subdir] = contrib
+projects[konzilo][type] = module
+projects[konzilo][download][type] = git
+projects[konzilo][download][branch] = 7.x-1.x
+projects[konzilo][download][url] = git@github.com:konzilo/drupal-konzilo.git
+projects[konzilo][subdir] = contrib
 
 projects[libraries][version] = 2.1
 projects[libraries][subdir] = contrib
@@ -191,6 +191,3 @@ libraries[oauth2-server-php][destination] = libraries
 libraries[flexslider][download][type] = get
 libraries[flexslider][download][url] = https://github.com/woothemes/FlexSlider/archive/master.zip
 libraries[flexslider][destination] = libraries
-
-projects[shiny][type] = theme
-projects[shiny][version] = 1.4
